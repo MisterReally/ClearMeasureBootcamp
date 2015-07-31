@@ -17,7 +17,8 @@ properties {
 	$projectConfig = "Release"
 	$base_dir = resolve-path .\
 	$source_dir = "$base_dir\src"
-    $nunitPath = "$source_dir\packages\NUnit*\Tools"
+    $tools_dir = "$base_dir\tools"
+    $nunitPath = "$tools_dir\NUnit.Runners*\Tools"
 	
 	$build_dir = "$base_dir\build"
 	$test_dir = "$build_dir\test"
@@ -36,11 +37,11 @@ properties {
 	$databasePassword = "9Db12345678"
     
     $connection_string = "server=$databaseserver;database=$databasename;$databaseUser;"
-    $AliaSql = "$base_dir\tools\AliaSql\AliaSql.exe"
+    $AliaSql = "$tools_dir\AliaSql\AliaSql.exe"
     $webapp_dir = "$source_dir\UI"
 }
 
-task default -depends Init, Compile, RebuildDatabase #, Test #, LoadData
+task default -depends Init, Compile, RebuildDatabase, Test #, LoadData
 task ci -depends Init, CommonAssemblyInfo, ConnectionString, Compile, RebuildDatabase, Test, Package
 
 task Init {
