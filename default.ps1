@@ -8,7 +8,7 @@ else {
     $env:buildconfig = "Debug"
 }
 
-Framework "4.5.1"
+Framework "4.6"
 
 properties {
     $projectName = "ClearMeasure.Bootcamp"
