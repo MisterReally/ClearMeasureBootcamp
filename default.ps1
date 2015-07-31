@@ -36,11 +36,11 @@ properties {
 	$databasePassword = "9Db12345678"
     
     $connection_string = "server=$databaseserver;database=$databasename;$databaseUser;"
-    $AliaSql = "$source_dir\Database\scripts\AliaSql.exe"
+    $AliaSql = "$base_dir\tools\AliaSql\AliaSql.exe"
     $webapp_dir = "$source_dir\UI"
 }
 
-task default -depends Init, Compile, RebuildDatabase, Test, LoadData
+task default -depends Init, Compile, RebuildDatabase #, Test #, LoadData
 task ci -depends Init, CommonAssemblyInfo, ConnectionString, Compile, RebuildDatabase, Test, Package
 
 task Init {
@@ -60,7 +60,7 @@ task ConnectionString {
 
 task Compile -depends Init {
     exec {
-        & msbuild /t:Clean`;Rebuild /v:q /nologo /p:Configuration=$projectConfig $source_dir\$projectName.sln
+        & msbuild /t:Clean`;Rebuild /v:q /nologo /p:Configuration=$projectConfig $base_dir\$projectName.sln
     }
 }
 
