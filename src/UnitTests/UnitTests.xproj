@@ -6,8 +6,8 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>7cd6f24f-f93b-4f01-8802-92b410be7b2f</ProjectGuid>
-    <RootNamespace>ClearMeasure.Bootstrap.Core</RootNamespace>
+    <ProjectGuid>b509520c-61eb-4098-9cc3-6e1e206c92b9</ProjectGuid>
+    <RootNamespace>ClearMeasure.Bootstrap.UnitTests</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">..\..\artifacts\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">..\..\artifacts\bin\$(MSBuildProjectName)\</OutputPath>
   </PropertyGroup>

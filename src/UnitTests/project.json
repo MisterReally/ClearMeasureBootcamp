@@ -1,0 +1,25 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "UnitTests Class Library",
+  "authors": [ "James" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "System.Collections": "4.0.10-beta-23109",
+    "System.Linq": "4.0.0-beta-23109",
+    "System.Threading": "4.0.10-beta-23109",
+    "System.Runtime": "4.0.10-beta-23109",
+    "Microsoft.CSharp": "4.0.0-beta-23109",
+    "NUnit": "2.6.4",
+    "NUnit.Should": "1.0.2",
+    "RhinoMocks": "3.6.1",
+    "Core": "1.0.0-*"
+
+  },
+
+  "frameworks": {
+    "dnx46": { }
+  }
+}

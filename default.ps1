@@ -12,7 +12,7 @@ Framework "4.6"
 
 properties {
     $projectName = "ClearMeasure.Bootcamp"
-    $unitTestAssembly = "ClearMeasure.Bootcamp.UnitTests.dll"
+    $unitTestAssembly = "UnitTests.dll"
     $integrationTestAssembly = "ClearMeasure.Bootcamp.IntegrationTests.dll"
 	$projectConfig = "Release"
 	$base_dir = resolve-path .\
@@ -21,7 +21,7 @@ properties {
     $nunitPath = "$tools_dir\NUnit.Runners*\Tools"
 	
 	$build_dir = "$base_dir\build"
-	$test_dir = "$build_dir\test"
+	$test_dir = "$base_dir\artifacts\bin\UnitTests\Release\dnx46"
 	$testCopyIgnorePath = "_ReSharper"
 	$package_dir = "$build_dir\package"	
 	$package_file = "$build_dir\latestVersion\" + $projectName +"_Package.zip"
@@ -67,8 +67,11 @@ task Compile -depends Init {
 
 task Test {
     copy_all_assemblies_for_test $test_dir
+        # & $nunitPath\nunit-console.exe $test_dir\$unitTestAssembly $test_dir\$integrationTestAssembly /nologo /xml=$build_dir\TestResult.xml
+    Write-Host $nunitPath\nunit-console.exe
+    Write-Host $test_dir\$unitTestAssembly
     exec {
-        & $nunitPath\nunit-console.exe $test_dir\$unitTestAssembly $test_dir\$integrationTestAssembly /nologo /xml=$build_dir\TestResult.xml
+        & $nunitPath\nunit-console.exe $test_dir\$unitTestAssembly /framework:net-4.6 /nologo /xml=$build_dir\TestResult.xml
     }
 }
 
