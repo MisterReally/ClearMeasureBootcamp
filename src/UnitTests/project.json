@@ -15,7 +15,7 @@
     "NUnit": "2.6.4",
     "NUnit.Should": "1.0.2",
     "RhinoMocks": "3.6.1",
-    "Core": "1.0.0-*"
+    "ClearMeasure.Bootcamp.Core": "1.0.0-*"
 
   },
 

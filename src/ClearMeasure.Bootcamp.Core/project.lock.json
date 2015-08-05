@@ -2,18 +2,7 @@
   "locked": false,
   "version": 1,
   "targets": {
-    "DNX,Version=v4.6": {
-      "FluentNHibernate/2.0.1.0": {
-        "dependencies": {
-          "NHibernate": "4.0"
-        },
-        "compile": {
-          "lib/net40/FluentNHibernate.dll": {}
-        },
-        "runtime": {
-          "lib/net40/FluentNHibernate.dll": {}
-        }
-      },
+    ".NETFramework,Version=v4.6": {
       "Iesi.Collections/4.0.1.4000": {
         "compile": {
           "lib/net40/Iesi.Collections.dll": {}
@@ -33,15 +22,156 @@
           "lib/net45/_._": {}
         }
       },
-      "NHibernate/4.0.3.4000": {
-        "dependencies": {
-          "Iesi.Collections": "[4.0, 5.0)"
-        },
+      "System.Collections/4.0.10-beta-23109": {
         "compile": {
-          "lib/net40/NHibernate.dll": {}
+          "ref/net46/_._": {}
         },
         "runtime": {
-          "lib/net40/NHibernate.dll": {}
+          "lib/net46/_._": {}
+        }
+      },
+      "System.Collections.NonGeneric/4.0.0": {
+        "dependencies": {
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10"
+        },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System"
+        ],
+        "compile": {
+          "ref/net46/System.Collections.NonGeneric.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Collections.NonGeneric.dll": {}
+        }
+      },
+      "System.Data.Common/4.0.0": {
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Collections.NonGeneric": "4.0.0",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.0",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.RegularExpressions": "4.0.0",
+          "System.Threading.Tasks": "4.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System.Data"
+        ],
+        "compile": {
+          "ref/net46/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Data.Common.dll": {}
+        }
+      },
+      "System.Diagnostics.Debug/4.0.10": {
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
+      },
+      "System.Globalization/4.0.10": {
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
+      },
+      "System.IO/4.0.0": {
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Linq/4.0.0-beta-23109": {
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Resources.ResourceManager/4.0.0": {
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Runtime/4.0.10-beta-23109": {
+        "compile": {
+          "ref/net451/_._": {}
+        },
+        "runtime": {
+          "lib/net451/_._": {}
+        }
+      },
+      "System.Runtime.Extensions/4.0.10": {
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
+      },
+      "System.Text.RegularExpressions/4.0.0": {
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Threading/4.0.10-beta-23109": {
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
+      },
+      "System.Threading.Tasks/4.0.0": {
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      }
+    },
+    "DNX,Version=v4.6": {
+      "Iesi.Collections/4.0.1.4000": {
+        "compile": {
+          "lib/net40/Iesi.Collections.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Iesi.Collections.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.0.0-beta-23109": {
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Collections/4.0.10-beta-23109": {
@@ -178,17 +308,6 @@
     }
   },
   "libraries": {
-    "FluentNHibernate/2.0.1.0": {
-      "sha512": "zyNzd5AB2OUcMx8lAm0bsFgOTcAMrnoPHRkz22D1+xlgmseaBFR6sJR33WKa1LJmEY2viX+X/pXfRkd9gbEOkA==",
-      "files": [
-        "FluentNHibernate.2.0.1.nupkg",
-        "FluentNHibernate.2.0.1.nupkg.sha512",
-        "FluentNHibernate.nuspec",
-        "lib/net40/FluentNHibernate.dll",
-        "lib/net40/FluentNHibernate.pdb",
-        "lib/net40/FluentNHibernate.XML"
-      ]
-    },
     "Iesi.Collections/4.0.1.4000": {
       "sha512": "77x4RfYcgQyQIfvmz3WUDGmzJf7CHl1++ArQz+7ZyrxuGSULkczQlbX140FKJY42YpTpbwLqr5fsQxAZ5AB5qg==",
       "files": [
@@ -229,29 +348,6 @@
         "ref/win8/_._",
         "ref/wp80/_._",
         "ref/wpa81/_._"
-      ]
-    },
-    "NHibernate/4.0.3.4000": {
-      "sha512": "ukrgwVDaz040ZRzuaKHjAibR0UG0qVRya3eSLAqjMK+SiLdwp+2pHHl7I1KaOV3zsFrlehwOLpZj5nvJs1dbcw==",
-      "files": [
-        "ConfigurationTemplates/FireBird.cfg.xml",
-        "ConfigurationTemplates/MSSQL.cfg.xml",
-        "ConfigurationTemplates/MySql.cfg.xml",
-        "ConfigurationTemplates/Oracle.cfg.xml",
-        "ConfigurationTemplates/PostgreSQL.cfg.xml",
-        "ConfigurationTemplates/SQLite.cfg.xml",
-        "ConfigurationTemplates/SybaseASE.cfg.xml",
-        "ConfigurationTemplates/SybaseSQLAnywhere.cfg.xml",
-        "lib/net40/NHibernate.dll",
-        "lib/net40/NHibernate.xml",
-        "NHibernate.4.0.3.4000.nupkg",
-        "NHibernate.4.0.3.4000.nupkg.sha512",
-        "NHibernate.license.txt",
-        "NHibernate.nuspec",
-        "NHibernate.readme.html",
-        "NHibernate.releasenotes.txt",
-        "nhibernate-configuration.xsd",
-        "nhibernate-mapping.xsd"
       ]
     },
     "System.Collections/4.0.10-beta-23109": {
@@ -710,18 +806,15 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "System.Data.Common >= 4.0.0",
       "System.Collections >= 4.0.10-beta-23109",
       "System.Linq >= 4.0.0-beta-23109",
-      "System.Data.Common >= 4.0.0",
       "System.Threading >= 4.0.10-beta-23109",
       "System.Runtime >= 4.0.10-beta-23109",
       "Microsoft.CSharp >= 4.0.0-beta-23109",
-      "Core >= 1.0.0-*"
+      "Iesi.Collections >= 4.0.1.4000"
     ],
-    "DNX,Version=v4.6": [
-      "FluentNHibernate >= 2.0.1",
-      "Iesi.Collections >= 4.0.1.4000",
-      "NHibernate >= 4.0.3.4000"
-    ]
+    ".NETFramework,Version=v4.6": [],
+    "DNX,Version=v4.6": []
   }
 }

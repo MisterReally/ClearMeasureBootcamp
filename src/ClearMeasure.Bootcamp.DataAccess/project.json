@@ -8,24 +8,22 @@
   "licenseUrl": "",
 
   "dependencies": {
-    "System.Collections": "4.0.10-beta-23109",
     "System.Linq": "4.0.0-beta-23109",
     "System.Data.Common": "4.0.0",
     "System.Threading": "4.0.10-beta-23109",
     "System.Runtime": "4.0.10-beta-23109",
     "Microsoft.CSharp": "4.0.0-beta-23109",
-    "Core": "1.0.0-*"
+    "FluentNHibernate": "2.0.1",
+    "Iesi.Collections": "4.0.1.4000",
+    "NHibernate": "4.0.3.4000",
+    "ClearMeasure.Bootcamp.Core": "1.0.0-*"
 
   },
 
   "frameworks": {
+    "net46": { },
     "dnx46": {
-      "dependencies": {
-        "FluentNHibernate": "2.0.1",
-        "Iesi.Collections": "4.0.1.4000",
-        "NHibernate": "4.0.3.4000"
-
-      }
+      "System.Collections": "4.0.10-beta-23109"
     }
   }
 }
