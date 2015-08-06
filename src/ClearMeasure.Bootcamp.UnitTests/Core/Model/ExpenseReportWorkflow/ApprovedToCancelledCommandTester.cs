@@ -3,15 +3,14 @@ using ClearMeasure.Bootcamp.Core.Features.Workflow;
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Model.ExpenseReportWorkflow;
 using ClearMeasure.Bootcamp.Core.Services;
-using NUnit.Framework;
-using Rhino.Mocks;
+using Xunit;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
 {
-    [TestFixture]
+
     public class ApprovedToCancelledCommandTester : StateCommandBaseTester
     {
-        [Test]
+        [Fact]
         public void ShouldSetLastWithdrawnAndCancelledTime()
         {
             var order = new ExpenseReport();
@@ -26,20 +25,20 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
 
             command.Execute(new ExecuteTransitionCommand(order, null, employee, cancelledDate));
 
-            Assert.That(order.LastCancelled, Is.EqualTo(cancelledDate));
-            Assert.That(order.LastWithdrawn, Is.EqualTo(cancelledDate));
+            Assert.Equal(order.LastCancelled, cancelledDate);
+            Assert.Equal(order.LastWithdrawn, cancelledDate);
 
             var cancelledDate2 = new DateTime(2015, 02, 02);
 
             var command2 = new ApprovedToCancelledCommand();
             command2.Execute(new ExecuteTransitionCommand(order, null, employee, cancelledDate2));
 
-            Assert.That(order.LastCancelled, Is.Not.EqualTo(cancelledDate));
-            Assert.That(order.LastCancelled, Is.EqualTo(cancelledDate2));
+            Assert.NotEqual(order.LastCancelled, cancelledDate);
+            Assert.Equal(order.LastCancelled, cancelledDate2);
         }
         
 
-        [Test]
+        [Fact]
         public void ShouldNotBeValidInWrongStatus()
         {
             var order = new ExpenseReport();
@@ -48,10 +47,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Submitter = employee;
 
             var command = new ApprovedToCancelledCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand{Report = order, CurrentUser = employee}), Is.False);
+            Assert.False(command.IsValid(new ExecuteTransitionCommand{Report = order, CurrentUser = employee}));
         }
 
-        [Test]
+        [Fact]
         public void ShouldNotBeValidWithWrongEmployee()
         {
             var order = new ExpenseReport();
@@ -63,13 +62,13 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Approver = approver;
 
             var command = new ApprovedToCancelledCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand { Report = order, CurrentUser = approver }), Is.False);
+            Assert.False(command.IsValid(new ExecuteTransitionCommand { Report = order, CurrentUser = approver }));
 
             var command2 = new ApprovedToCancelledCommand();
-            Assert.That(command2.IsValid(new ExecuteTransitionCommand { Report = order, CurrentUser = differentEmployee }), Is.False);
+            Assert.False(command2.IsValid(new ExecuteTransitionCommand { Report = order, CurrentUser = differentEmployee }));
         }
 
-        [Test]
+        [Fact]
         public void ShouldBeValid()
         {
             var order = new ExpenseReport();
@@ -78,10 +77,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Submitter = employee;
 
             var command = new ApprovedToCancelledCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand { Report = order, CurrentUser = employee }), Is.True);
+            Assert.True(command.IsValid(new ExecuteTransitionCommand { Report = order, CurrentUser = employee }));
         }
 
-        [Test]
+        [Fact]
         public void ShouldTransitionStateProperly()
         {
             var order = new ExpenseReport();
@@ -93,7 +92,7 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             var command = new ApprovedToCancelledCommand();
             command.Execute(new ExecuteTransitionCommand(order, null, employee, new DateTime()));
 
-            Assert.That(order.Status, Is.EqualTo(ExpenseReportStatus.Cancelled));
+            Assert.Equal(order.Status, ExpenseReportStatus.Cancelled);
         }
 
         protected override StateCommandBase GetStateCommand(ExpenseReport order, Employee employee)

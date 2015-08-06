@@ -16,7 +16,7 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Services
             var mocks = new MockRepository();
             var generator = mocks.StrictMock<INumberGenerator>();
             ICalendar calendar = new StubbedCalendar(new DateTime(2000, 1, 1));
-            Expect.Call(generator.GenerateNumber()).Return("124");
+            Expect.On(generator).Call(generator.GenerateNumber()).Return("124");
             mocks.ReplayAll();
 
             var builder = new ExpenseReportBuilder(generator, calendar);

@@ -3,12 +3,11 @@ using ClearMeasure.Bootcamp.Core.Features.Workflow;
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Model.ExpenseReportWorkflow;
 using ClearMeasure.Bootcamp.Core.Services;
-using NUnit.Framework;
-using Rhino.Mocks;
+using Xunit;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
 {
-    [TestFixture]
+
     public class DraftingCommandTester : StateCommandBaseTester
     {
         protected override StateCommandBase GetStateCommand(ExpenseReport order, Employee employee)
@@ -16,7 +15,7 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             return new DraftingCommand();
         }
 
-        [Test]
+        [Fact]
         public void ShouldBeValid()
         {
             var order = new ExpenseReport();
@@ -25,10 +24,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Submitter = employee;
 
             var command = new DraftingCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())), Is.True);
+            Assert.True(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())));
         }
 
-        [Test]
+        [Fact]
         public void ShouldNotBeValidInWrongStatus()
         {
             var order = new ExpenseReport();
@@ -37,10 +36,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Submitter = employee;
 
             var command = new DraftingCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())), Is.False);
+            Assert.False(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())));
         }
 
-        [Test]
+        [Fact]
         public void ShouldNotBeValidWithWrongEmployee()
         {
             var order = new ExpenseReport();
@@ -49,10 +48,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Submitter = employee;
 
             var command = new DraftingCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, new Employee(), new DateTime())), Is.False);
+            Assert.False(command.IsValid(new ExecuteTransitionCommand(order, null, new Employee(), new DateTime())));
         }
 
-        [Test]
+        [Fact]
         public void ShouldTransitionStateProperly()
         {
             var order = new ExpenseReport();
@@ -64,7 +63,7 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             var command = new DraftingCommand();
             command.Execute(new ExecuteTransitionCommand(order, null, employee, new DateTime()));
 
-            Assert.That(order.Status, Is.EqualTo(ExpenseReportStatus.Draft));
+            Assert.Equal(order.Status, ExpenseReportStatus.Draft);
         }
 
     }

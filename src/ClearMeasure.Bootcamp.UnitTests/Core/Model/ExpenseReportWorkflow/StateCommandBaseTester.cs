@@ -7,4 +7,5 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
     {
         protected abstract StateCommandBase GetStateCommand(ExpenseReport order, Employee employee);
     }
+
 }

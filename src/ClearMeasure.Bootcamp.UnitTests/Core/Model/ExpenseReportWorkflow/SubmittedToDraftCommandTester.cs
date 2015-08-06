@@ -3,15 +3,14 @@ using ClearMeasure.Bootcamp.Core.Features.Workflow;
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Model.ExpenseReportWorkflow;
 using ClearMeasure.Bootcamp.Core.Services;
-using NUnit.Framework;
+using Xunit;
 using Rhino.Mocks;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
 {
-     [TestFixture]
     public class SubmittedToDraftCommandTester : StateCommandBaseTester
     {
-        [Test]
+        [Fact]
         public void ShouldNotBeValidInWrongStatus()
         {
             var order = new ExpenseReport();
@@ -20,10 +19,11 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Submitter = employee;
 
             var command = new SubmittedToDraftCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())), Is.False);
+            Assert.False(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())));
+
         }
 
-        [Test]
+        [Fact]
         public void ShouldNotBeValidWithWrongEmployee()
         {
             var order = new ExpenseReport();
@@ -33,10 +33,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Approver = employee;
 
             var command = new SubmittedToDraftCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())), Is.False);
+            Assert.False(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())));
         }
 
-        [Test]
+        [Fact]
         public void ShouldBeValid()
         {
             var order = new ExpenseReport();
@@ -45,10 +45,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Submitter = employee;
 
             var command = new SubmittedToDraftCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())), Is.True);
+            Assert.True(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())));
         }
 
-        [Test]
+        [Fact]
         public void ShouldTransitionStateProperly()
         {
             var order = new ExpenseReport();
@@ -60,10 +60,11 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             var command = new SubmittedToDraftCommand();
             command.Execute(new ExecuteTransitionCommand(order, null, employee, new DateTime()));
 
-            Assert.That(order.Status, Is.EqualTo(ExpenseReportStatus.Draft));
+            Assert.Equal(order.Status, ExpenseReportStatus.Draft);
+            
         }
 
-        [Test]
+        [Fact]
         public void ShouldSetLastWithdrawnOnEachWithdraw()
         {
             var order = new ExpenseReport();
@@ -72,22 +73,22 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             var employee = new Employee();
             order.Submitter = employee;
 
-            var withdrawnDate = new DateTime(2015,01,01);
+            var withdrawnDate = new DateTime(2015, 01, 01);
 
             var command = new SubmittedToDraftCommand();
             command.Execute(new ExecuteTransitionCommand(order, null, employee, withdrawnDate));
 
-            Assert.That(order.LastWithdrawn, Is.EqualTo(withdrawnDate));
+            Assert.Equal(order.LastWithdrawn, withdrawnDate);
 
             var withdrawnDate2 = new DateTime(2015, 02, 02);
 
             var command2 = new SubmittedToDraftCommand();
             command.Execute(new ExecuteTransitionCommand(order, null, employee, withdrawnDate2));
 
-            Assert.That(order.LastWithdrawn, Is.Not.EqualTo(withdrawnDate));
-            Assert.That(order.LastWithdrawn, Is.EqualTo(withdrawnDate2));
+            Assert.NotEqual(order.LastWithdrawn, withdrawnDate);
+            Assert.Equal(order.LastWithdrawn, withdrawnDate2);
         }
-        
+
         protected override StateCommandBase GetStateCommand(ExpenseReport order, Employee employee)
         {
             return new SubmittedToDraftCommand();

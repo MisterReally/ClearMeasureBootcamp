@@ -2,14 +2,14 @@
 using ClearMeasure.Bootcamp.Core.Features.Workflow;
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Model.ExpenseReportWorkflow;
-using NUnit.Framework;
+using Xunit;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
 {
-    [TestFixture]
+
     public class SubmittedToApprovedCommandTester : StateCommandBaseTester
     {
-        [Test]
+        [Fact]
         public void ShouldNotBeValidInWrongStatus()
         {
             var order = new ExpenseReport();
@@ -18,10 +18,11 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Approver = employee;
 
             var command = new SubmittedToApprovedCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())), Is.False);
+
+            Assert.False(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())));
         }
 
-        [Test]
+        [Fact]
         public void ShouldNotBeValidWithWrongEmployee()
         {
             var order = new ExpenseReport();
@@ -31,10 +32,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Approver = approver;
 
             var command = new SubmittedToApprovedCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())), Is.False);
+            Assert.False(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())));
         }
 
-        [Test]
+        [Fact]
         public void ShouldNotBeValidWithWrongApprover()
         {
             var order = new ExpenseReport();
@@ -42,12 +43,12 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             var employee = new Employee();
             order.Approver = employee;
             var differentEmployee = new Employee();
-           
+
             var command = new SubmittedToApprovedCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, differentEmployee, new DateTime())), Is.False);
+            Assert.False(command.IsValid(new ExecuteTransitionCommand(order, null, differentEmployee, new DateTime())));
         }
 
-        [Test]
+        [Fact]
         public void ShouldBeValid()
         {
             var order = new ExpenseReport();
@@ -56,10 +57,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Approver = employee;
 
             var command = new SubmittedToApprovedCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())), Is.True);
+            Assert.True(command.IsValid(new ExecuteTransitionCommand(order, null, employee, new DateTime())));
         }
 
-        [Test]
+        [Fact]
         public void ShouldBeValidWithOnBehalfApprover()
         {
             var order = new ExpenseReport();
@@ -70,10 +71,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             order.Approver = manager;
 
             var command = new SubmittedToApprovedCommand();
-            Assert.That(command.IsValid(new ExecuteTransitionCommand(order, null, assistant, new DateTime())), Is.True);
+            Assert.True(command.IsValid(new ExecuteTransitionCommand(order, null, assistant, new DateTime())));
         }
 
-        [Test]
+        [Fact]
         public void ShouldTransitionStateProperly()
         {
             var order = new ExpenseReport();
@@ -84,11 +85,10 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
 
             var command = new SubmittedToApprovedCommand();
             command.Execute(new ExecuteTransitionCommand(order, null, employee, new DateTime()));
-
-            Assert.That(order.Status, Is.EqualTo(ExpenseReportStatus.Approved));
+            Assert.Equal(order.Status, ExpenseReportStatus.Approved);
         }
 
-        [Test]
+        [Fact]
         public void ShouldSetLastApprovedEachTime()
         {
             var order = new ExpenseReport();
@@ -97,22 +97,22 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
             var employee = new Employee();
             order.Approver = employee;
 
-            var approvedDate = new DateTime(2015,01,01);
+            var approvedDate = new DateTime(2015, 01, 01);
 
             var command = new SubmittedToApprovedCommand();
             command.Execute(new ExecuteTransitionCommand(order, null, employee, approvedDate));
 
-            Assert.That(order.LastApproved, Is.EqualTo(approvedDate));
+            Assert.Equal(order.LastApproved, approvedDate);
 
             var approvedDate2 = new DateTime(2015, 02, 02);
 
             var command2 = new SubmittedToApprovedCommand();
             command2.Execute(new ExecuteTransitionCommand(order, null, employee, approvedDate2));
 
-            Assert.That(order.LastApproved, Is.Not.EqualTo(approvedDate));
-            Assert.That(order.LastApproved, Is.EqualTo(approvedDate2));
+            Assert.NotEqual(order.LastApproved, approvedDate);
+            Assert.Equal(order.LastApproved, approvedDate2);
         }
-        
+
         protected override StateCommandBase GetStateCommand(ExpenseReport order, Employee employee)
         {
             return new SubmittedToApprovedCommand();

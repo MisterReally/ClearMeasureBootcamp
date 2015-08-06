@@ -52,8 +52,8 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Services
                                            new StubbedStateCommand(true), new StubbedStateCommand(true),
                                            new StubbedStateCommand(false)
                                        };
-
-            Expect.Call(facilitator.GetAllStateCommands()).IgnoreArguments().Return(commandsToReturn);
+            
+            Expect.On(facilitator).Call(facilitator.GetAllStateCommands()).IgnoreArguments().Return(commandsToReturn);
             mocks.ReplayAll();
 
             IStateCommand[] commands = facilitator.GetValidStateCommands(null);
