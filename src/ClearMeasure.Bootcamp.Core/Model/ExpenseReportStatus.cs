@@ -2,7 +2,7 @@ using System;
 
 namespace ClearMeasure.Bootcamp.Core.Model
 {
-	public class ExpenseReportStatus
+	public class ExpenseReportStatus 
 	{
 		public static readonly ExpenseReportStatus None = new ExpenseReportStatus("", "", " ", 0);
 		public static readonly ExpenseReportStatus Draft = new ExpenseReportStatus("DFT", "Draft", "Drafting", 1);

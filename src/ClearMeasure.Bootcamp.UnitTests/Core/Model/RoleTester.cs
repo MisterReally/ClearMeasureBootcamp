@@ -1,23 +1,23 @@
 using System;
 using ClearMeasure.Bootcamp.Core.Model;
-using NUnit.Framework;
+using Xunit;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Model
 {
-    [TestFixture]
+
     public class RoleTester
     {
-        [Test]
+        [Fact]
         public void Role_defaults_properly()
         {
             var role = new Role();
 
-            Assert.That(role.Name, Is.Null);
-            Assert.That(role.Id, Is.EqualTo(Guid.Empty));
+            Assert.Null(role.Name);
+            Assert.Equal(role.Id, Guid.Empty);
 
             var role2 = new Role("roleName");
 
-            Assert.That(role2.Name, Is.EqualTo("roleName"));
+            Assert.Equal(role2.Name, "roleName");
         }
     }
 }

@@ -1,37 +1,39 @@
 using System;
 using System.Linq;
 using ClearMeasure.Bootcamp.Core.Model;
-using NUnit.Framework;
+using Xunit;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Model
 {
-    [TestFixture]
     public class ExpenseReportTester
     {
-        [Test]
+        [Fact]
         public void PropertiesShouldInitializeToProperDefaults()
         {
             var report = new ExpenseReport();
-            Assert.That(report.Id, Is.EqualTo(Guid.Empty));
-            Assert.That(report.Title, Is.EqualTo(string.Empty));
-            Assert.That(report.Description, Is.EqualTo(string.Empty));
-            Assert.That(report.Status, Is.EqualTo(ExpenseReportStatus.Draft));
-            Assert.That(report.Number, Is.EqualTo(null));
-            Assert.That(report.Submitter, Is.EqualTo(null));
-            Assert.That(report.Approver, Is.EqualTo(null));
-            Assert.That(report.GetAuditEntries().Length, Is.EqualTo(0));
-            Assert.That(report.Total, Is.EqualTo(0.0));
+
+            Assert.Equal(report.Id, Guid.Empty);
+            Assert.Equal(report.Title, string.Empty);
+            Assert.Equal(report.Description, string.Empty);
+            Assert.Equal(report.Description, string.Empty);
+            Assert.Equal(report.Status, ExpenseReportStatus.Draft);
+            Assert.Null(report.Number);
+            Assert.Null(report.Submitter);
+            Assert.Null(report.Approver);
+            Assert.Equal(report.GetAuditEntries().Length, 0);
+            Assert.Equal(report.Total, 0);
+
         }
 
-        [Test]
+        [Fact]
         public void ToStringShouldReturnNumber()
         {
             var order = new ExpenseReport();
             order.Number = "456";
-            Assert.That(order.ToString(), Is.EqualTo("ExpenseReport 456"));
+            Assert.Equal(order.ToString(), "ExpenseReport 456");
         }
 
-        [Test]
+        [Fact]
         public void PropertiesShouldGetAndSetValuesProperly()
         {
             var report = new ExpenseReport();
@@ -50,36 +52,36 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model
             report.Approver = assignee;
             report.AddAuditEntry(testAudit);
 
-            Assert.That(report.Id, Is.EqualTo(guid));
-            Assert.That(report.Title, Is.EqualTo("Title"));
-            Assert.That(report.Description, Is.EqualTo("Description"));
-            Assert.That(report.Status, Is.EqualTo(ExpenseReportStatus.Approved));
-            Assert.That(report.Number, Is.EqualTo("Number"));
-            Assert.That(report.Submitter, Is.EqualTo(creator));
-            Assert.That(report.Approver, Is.EqualTo(assignee));
-            Assert.That(report.GetAuditEntries()[0].EndStatus, Is.EqualTo(ExpenseReportStatus.Approved));
-            Assert.That(report.GetAuditEntries()[0].Date, Is.EqualTo(auditDate));
+            Assert.Equal(report.Id, guid);
+            Assert.Equal(report.Title, "Title");
+            Assert.Equal(report.Description, "Description");
+            Assert.Equal(report.Status, ExpenseReportStatus.Approved);
+            Assert.Equal(report.Number, "Number");
+            Assert.Equal(report.Submitter, creator);
+            Assert.Equal(report.Approver, assignee);
+            Assert.Equal(report.GetAuditEntries()[0].EndStatus, ExpenseReportStatus.Approved);
+            Assert.Equal(report.GetAuditEntries()[0].Date, auditDate);
+
         }
 
-        [Test]
+        [Fact]
         public void ShouldShowFriendlyStatusValuesAsStrings()
         {
             var report = new ExpenseReport();
             report.Status = ExpenseReportStatus.Submitted;
-
-            Assert.That(report.FriendlyStatus, Is.EqualTo("Submitted"));
+            Assert.Equal(report.FriendlyStatus, "Submitted");
         }
 
-        [Test]
+        [Fact]
         public void ShouldChangeStatus()
         {
             var report = new ExpenseReport();
             report.Status = ExpenseReportStatus.Draft;
             report.ChangeStatus(ExpenseReportStatus.Submitted);
-            Assert.That(report.Status, Is.EqualTo(ExpenseReportStatus.Submitted));
+            Assert.Equal(report.Status, ExpenseReportStatus.Submitted);
         }
 
-        [Test]
+        [Fact]
         public void ShouldAddNewExpense()
         {
             var report = new ExpenseReport();
@@ -88,9 +90,8 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Model
 
             report.AddExpense(report.Description, report.Total);
 
-            Assert.That(report._expenses.Count, Is.EqualTo(1));
-
-            Assert.That(report._expenses.First().Description, Is.EqualTo(report.Description));
+            Assert.Equal(report._expenses.Count, 1);
+            Assert.Equal(report._expenses.First().Description, report.Description);
         }
     }
 }

@@ -1,11 +1,11 @@
-﻿using NUnit.Framework;
+﻿using Xunit;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Model
 {
    
     public class AuditEntryTester
     {
-        [Test]
+        [Fact]
         public void ShouldRetainEmployeeName()
         {
             

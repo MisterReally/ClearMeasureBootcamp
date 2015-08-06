@@ -2,7 +2,7 @@ using System;
 
 namespace ClearMeasure.Bootcamp.Core.Model
 {
-    public class Employee : IComparable<Employee>
+    public class Employee : IComparable<Employee>, IEquatable<Employee>
     {
         public Guid Id { get; set; }
         public string UserName { get; set; }
