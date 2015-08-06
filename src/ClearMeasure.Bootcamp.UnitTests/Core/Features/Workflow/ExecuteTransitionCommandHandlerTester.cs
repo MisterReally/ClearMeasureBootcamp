@@ -1,14 +1,14 @@
 ﻿using System;
 using ClearMeasure.Bootcamp.Core.Features.Workflow;
 using ClearMeasure.Bootcamp.Core.Model;
-using NUnit.Framework;
+using Xunit;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Features.Workflow
 {
-    [TestFixture]
+
     public class ExecuteTransitionCommandHandlerTester
     {
-        [Test, Explicit("refactor needed")]
+        [Fact(Skip = "refactor needed")]
         public void ShouldExecuteDraftTransition()
         {
             var report = new ExpenseReport();
@@ -21,7 +21,8 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Features.Workflow
             var handler = new ExecuteTransitionCommandHandler(null);
             ExecuteTransitionResult result = handler.Handle(
                 new ExecuteTransitionCommand(report, "Save", employee, new DateTime()));
-            result.NewStatus.ShouldEqual("Drafting");
+
+            Assert.Equal(result.NewStatus,"Drafting");
         }
     }
 
