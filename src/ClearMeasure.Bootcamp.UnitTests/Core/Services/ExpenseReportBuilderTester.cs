@@ -2,15 +2,15 @@ using System;
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Services;
 using ClearMeasure.Bootcamp.Core.Services.Impl;
-using NUnit.Framework;
+using Xunit;
 using Rhino.Mocks;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Services
 {
-    [TestFixture]
+    
     public class ExpenseReportBuilderTester
     {
-        [Test]
+        [Fact]
         public void ShouldCorrectlyBuild()
         {
             var mocks = new MockRepository();
@@ -24,13 +24,15 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Services
             ExpenseReport expenseReport = builder.Build(creator);
 
             mocks.VerifyAll();
-            Assert.That(expenseReport.Submitter, Is.EqualTo(creator));
-            Assert.That(expenseReport.Number, Is.EqualTo("124"));
-            Assert.That(expenseReport.Approver, Is.Null);
-            Assert.That(expenseReport.Title, Is.Empty);
-            Assert.That(expenseReport.Description, Is.Empty);
-            Assert.That(expenseReport.Status, Is.EqualTo(ExpenseReportStatus.Draft));
-            Assert.That(expenseReport.Created, Is.EqualTo(new DateTime(2000, 1, 1)));
+
+            Assert.Equal(expenseReport.Submitter, creator);
+            Assert.Equal(expenseReport.Number, "124");
+            Assert.Null(expenseReport.Approver);
+            Assert.Equal(expenseReport.Title, string.Empty);
+            Assert.Equal(expenseReport.Description, string.Empty);
+            Assert.Equal(expenseReport.Status, ExpenseReportStatus.Draft);
+            Assert.Equal(expenseReport.Created, new DateTime(2000, 1, 1));
+
         }
     }
 }

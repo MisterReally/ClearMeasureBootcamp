@@ -1,18 +1,17 @@
 using ClearMeasure.Bootcamp.Core.Services.Impl;
-using NUnit.Framework;
+using Xunit;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Services
 {
-    [TestFixture]
+
     public class NumberGeneratorTester
     {
-        [Test]
+        [Fact]
         public void ShouldBeFiveInLength()
         {
             var generator = new NumberGenerator();
             string number = generator.GenerateNumber();
-
-            Assert.That(number.Length, Is.EqualTo(5));
+            Assert.Equal(number.Length, 5);
         }
     }
 }

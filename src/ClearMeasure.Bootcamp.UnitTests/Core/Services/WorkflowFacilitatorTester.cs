@@ -4,15 +4,15 @@ using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Model.ExpenseReportWorkflow;
 using ClearMeasure.Bootcamp.Core.Services;
 using ClearMeasure.Bootcamp.Core.Services.Impl;
-using NUnit.Framework;
+using Xunit;
 using Rhino.Mocks;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Services
 {
-    [TestFixture]
+
     public class WorkflowFacilitatorTester
     {
-        [Test]
+        [Fact]
         public void ShouldGetNoValidStateCommandsForWrongUser()
         {
             var facilitator = new WorkflowFacilitator();
@@ -20,28 +20,29 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Services
             var employee = new Employee();
             IStateCommand[] commands = facilitator.GetValidStateCommands(new ExecuteTransitionCommand{Report = report, CurrentUser = employee});
 
-            Assert.That(commands.Length, Is.EqualTo(0));
+            Assert.Equal(commands.Length, 0);
+            
         }
 
 
-        [Test]
+        [Fact]
         public void ShouldReturnAllStateCommandsInCorrectOrder()
         {
             var facilitator = new WorkflowFacilitator();
             IStateCommand[] commands = facilitator.GetAllStateCommands();
 
-            Assert.That(commands.Length, Is.EqualTo(7));
+            Assert.Equal(commands.Length, 7);
 
-            Assert.That(commands[0], Is.InstanceOf(typeof (DraftingCommand)));
-            Assert.That(commands[1], Is.InstanceOf(typeof (DraftToSubmittedCommand)));
-            Assert.That(commands[2], Is.InstanceOf(typeof (ApprovedToSubmittedCommand)));
-            Assert.That(commands[3], Is.InstanceOf(typeof(DraftToCancelledCommand)));
-            Assert.That(commands[4], Is.InstanceOf(typeof (ApprovedToCancelledCommand)));
-            Assert.That(commands[5], Is.InstanceOf(typeof(SubmittedToDraftCommand)));
-            Assert.That(commands[6], Is.InstanceOf(typeof(SubmittedToApprovedCommand)));
+            Assert.IsType<DraftingCommand>(commands[0]);
+            Assert.IsType<DraftToSubmittedCommand>(commands[1]);
+            Assert.IsType<ApprovedToSubmittedCommand>(commands[2]);
+            Assert.IsType<DraftToCancelledCommand>(commands[3]);
+            Assert.IsType<ApprovedToCancelledCommand>(commands[4]);
+            Assert.IsType<SubmittedToDraftCommand>(commands[5]);
+            Assert.IsType<SubmittedToApprovedCommand>(commands[6]);
         }
 
-        [Test]
+        [Fact]
         public void ShouldFilterFullListToReturnValidCommands()
         {
             var mocks = new MockRepository();
@@ -58,7 +59,7 @@ namespace ClearMeasure.Bootcamp.UnitTests.Core.Services
             IStateCommand[] commands = facilitator.GetValidStateCommands(null);
 
             mocks.VerifyAll();
-            Assert.That(commands.Length, Is.EqualTo(2));
+            Assert.Equal(commands.Length, 2);
         }
 
         public class StubbedStateCommand : IStateCommand
