@@ -12,8 +12,6 @@
     "System.Threading": "4.0.10-beta-23109",
     "System.Runtime": "4.0.10-beta-23109",
     "Microsoft.CSharp": "4.0.0-beta-23109",
-    "NUnit": "2.6.4",
-    "NUnit.Should": "1.0.2",
     "RhinoMocks": "3.6.1",
     "ClearMeasure.Bootcamp.Core": "1.0.0-*",
     "xunit": "2.1.0-*",

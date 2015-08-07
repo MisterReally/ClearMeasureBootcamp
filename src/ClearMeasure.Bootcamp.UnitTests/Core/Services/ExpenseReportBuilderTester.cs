@@ -2,8 +2,8 @@ using System;
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Services;
 using ClearMeasure.Bootcamp.Core.Services.Impl;
-using Xunit;
 using Rhino.Mocks;
+using Xunit;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Services
 {

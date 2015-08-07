@@ -1,6 +1,5 @@
 using ClearMeasure.Bootcamp.Core.Model;
 using Xunit;
-using Xunit.Sdk;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Model
 {

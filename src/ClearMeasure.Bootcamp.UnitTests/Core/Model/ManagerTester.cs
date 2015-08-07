@@ -1,4 +1,3 @@
-using System;
 using ClearMeasure.Bootcamp.Core.Model;
 using Xunit;
 

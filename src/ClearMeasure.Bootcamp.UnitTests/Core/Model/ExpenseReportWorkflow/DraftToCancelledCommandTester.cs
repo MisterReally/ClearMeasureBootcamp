@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ClearMeasure.Bootcamp.Core.Features.Workflow;
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Model.ExpenseReportWorkflow;
-using ClearMeasure.Bootcamp.Core.Services;
-///using NUnit.Framework;
-using Rhino.Mocks;
 using Xunit;
+///using NUnit.Framework;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow
 {

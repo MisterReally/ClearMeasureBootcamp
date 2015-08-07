@@ -1,9 +1,7 @@
 using System;
 using ClearMeasure.Bootcamp.Core.Features.Workflow;
 using ClearMeasure.Bootcamp.Core.Model;
-using ClearMeasure.Bootcamp.Core.Model.ExpenseReportAnalytics;
 using ClearMeasure.Bootcamp.Core.Model.ExpenseReportWorkflow;
-using ClearMeasure.Bootcamp.Core.Services;
 using Xunit;
 
 namespace ClearMeasure.Bootcamp.UnitTests.Core.Model.ExpenseReportWorkflow

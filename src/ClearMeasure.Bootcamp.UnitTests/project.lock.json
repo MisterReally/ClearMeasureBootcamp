@@ -188,25 +188,6 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
-      "NUnit/2.6.4": {
-        "compile": {
-          "lib/nunit.framework.dll": {}
-        },
-        "runtime": {
-          "lib/nunit.framework.dll": {}
-        }
-      },
-      "NUnit.Should/1.0.2.0": {
-        "dependencies": {
-          "NUnit": "2.5.9.10348"
-        },
-        "compile": {
-          "lib/NET30/NUnit.Should.dll": {}
-        },
-        "runtime": {
-          "lib/NET30/NUnit.Should.dll": {}
-        }
-      },
       "RhinoMocks/3.6.1": {
         "compile": {
           "lib/net/Rhino.Mocks.dll": {}
@@ -713,32 +694,6 @@
         "Newtonsoft.Json.6.0.6.nupkg.sha512",
         "Newtonsoft.Json.nuspec",
         "tools/install.ps1"
-      ]
-    },
-    "NUnit/2.6.4": {
-      "sha512": "cmSPvaCMRSP0DI19FP1Liw9DyJY3E/vOY1OrVaeJBZpZFWHkmT3fB9ngGWnZX/ftvA7zJEbghEaw3Yd+u4YFAw==",
-      "files": [
-        "lib/nunit.framework.dll",
-        "lib/nunit.framework.xml",
-        "license.txt",
-        "NUnit.2.6.4.nupkg",
-        "NUnit.2.6.4.nupkg.sha512",
-        "NUnit.nuspec"
-      ]
-    },
-    "NUnit.Should/1.0.2.0": {
-      "sha512": "johUVWcJAODvazhVlRdfuFLHSkrZaUCzPbvL7icQT5Edula+c/UIvKeD+onQ4cgchoUYE0vAYwC5viGuj87GDA==",
-      "files": [
-        "lib/NET20/NUnit.Should.dll",
-        "lib/NET30/NUnit.Should.dll",
-        "NUnit.Should.1.0.2.nupkg",
-        "NUnit.Should.1.0.2.nupkg.sha512",
-        "NUnit.Should.nuspec",
-        "README.markdown",
-        "src/AssemblyInfo.cs",
-        "src/ExtensionAttribute.cs",
-        "src/HelperMethods.cs",
-        "src/NUnit.Should.cs"
       ]
     },
     "RhinoMocks/3.6.1": {
@@ -1584,8 +1539,6 @@
       "System.Threading >= 4.0.10-beta-23109",
       "System.Runtime >= 4.0.10-beta-23109",
       "Microsoft.CSharp >= 4.0.0-beta-23109",
-      "NUnit >= 2.6.4",
-      "NUnit.Should >= 1.0.2",
       "RhinoMocks >= 3.6.1",
       "ClearMeasure.Bootcamp.Core >= 1.0.0-*",
       "xunit >= 2.1.0-*",
