@@ -27,11 +27,13 @@ namespace ClearMeasure.Bootcamp.IntegrationTests
         {
             BuildConfiguration(args);
 
+            // we will try to read a config file location from args or from the caller's 
+            // config.json, but otherwise will load one from a hard-coded default
             var configPath = Configuration.Get("configPath");
-
             if(string.IsNullOrEmpty(configPath))
                 configPath = $"{_appEnv.ApplicationBasePath}\\hibernate.cfg.xml";
 
+            // our methods that could be exposed as individual tasks
             CleanData(configPath);
             LoadData(configPath);
 
