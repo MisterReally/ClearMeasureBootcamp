@@ -12,16 +12,23 @@
     "System.Threading": "4.0.10-beta-23109",
     "System.Runtime": "4.0.10-beta-23109",
     "Microsoft.CSharp": "4.0.0-beta-23109",
+
     "FluentNHibernate": "1.4.0",
     "Iesi.Collections": "4.0.1.4000",
     "NHibernate": "4.0.3.4000",
-    "NUnit": "2.6.3",
-    "NUnit.Should": "1.0.2",
-    "structuremap": "3.0.5.130",
-    "ClearMeasure.Bootcamp.Core": "1.0.0-*",
-    "ClearMeasure.Bootcamp.DataAccess": "1.0.0-*"
-  },
+    "xunit": "2.1.0-*",
+    "xunit.runner.dnx": "2.1.0-*",
 
+    "structuremap": "3.0.5.130",
+
+    "ClearMeasure.Bootcamp.Core": "1.0.0-*",
+    "ClearMeasure.Bootcamp.DataAccess": "1.0.0-*",
+    "ClearMeasure.Bootcamp.Dnx": "1.0.0-*"
+  },
+  "commands": {
+    "test": "xunit.runner.dnx",
+    "dataload" : "ClearMeasure.Bootcamp.Dnx"
+  },
   "frameworks": {
     "dnx46": { }
   }

@@ -11,13 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		NuGet.Config = NuGet.Config
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "IntegrationTests", "src\IntegrationTests\IntegrationTests.xproj", "{10DB5554-83C8-4478-A5FA-422F72DA1451}"
-EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClearMeasure.Bootcamp.Core", "src\ClearMeasure.Bootcamp.Core\ClearMeasure.Bootcamp.Core.xproj", "{7CD6F24F-F93B-4F01-8802-92B410BE7B2F}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClearMeasure.Bootcamp.DataAccess", "src\ClearMeasure.Bootcamp.DataAccess\ClearMeasure.Bootcamp.DataAccess.xproj", "{E1395A63-1FDF-461C-BE31-24B35CA96121}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClearMeasure.Bootcamp.UnitTests", "src\ClearMeasure.Bootcamp.UnitTests\ClearMeasure.Bootcamp.UnitTests.xproj", "{B509520C-61EB-4098-9CC3-6E1E206C92B9}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClearMeasure.Bootcamp.Database", "src\ClearMeasure.Bootcamp.Database\ClearMeasure.Bootcamp.Database.xproj", "{3D716DCD-387E-4E3D-8B28-B149643BD109}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClearMeasure.Bootcamp.IntegrationTests", "src\ClearMeasure.Bootcamp.IntegrationTests\ClearMeasure.Bootcamp.IntegrationTests.xproj", "{10DB5554-83C8-4478-A5FA-422F72DA1451}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClearMeasure.Bootcamp.Dnx", "src\ClearMeasure.Bootcamp.Dnx\ClearMeasure.Bootcamp.Dnx.xproj", "{2BB23532-5F29-40A4-87CF-5F474CB9FC38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +29,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7CD6F24F-F93B-4F01-8802-92B410BE7B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7CD6F24F-F93B-4F01-8802-92B410BE7B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CD6F24F-F93B-4F01-8802-92B410BE7B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,14 +41,28 @@ Global
 		{B509520C-61EB-4098-9CC3-6E1E206C92B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B509520C-61EB-4098-9CC3-6E1E206C92B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B509520C-61EB-4098-9CC3-6E1E206C92B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D716DCD-387E-4E3D-8B28-B149643BD109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D716DCD-387E-4E3D-8B28-B149643BD109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D716DCD-387E-4E3D-8B28-B149643BD109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D716DCD-387E-4E3D-8B28-B149643BD109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BB23532-5F29-40A4-87CF-5F474CB9FC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BB23532-5F29-40A4-87CF-5F474CB9FC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BB23532-5F29-40A4-87CF-5F474CB9FC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BB23532-5F29-40A4-87CF-5F474CB9FC38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{10DB5554-83C8-4478-A5FA-422F72DA1451} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
 		{7CD6F24F-F93B-4F01-8802-92B410BE7B2F} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
 		{E1395A63-1FDF-461C-BE31-24B35CA96121} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
 		{B509520C-61EB-4098-9CC3-6E1E206C92B9} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
+		{3D716DCD-387E-4E3D-8B28-B149643BD109} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
+		{10DB5554-83C8-4478-A5FA-422F72DA1451} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
+		{2BB23532-5F29-40A4-87CF-5F474CB9FC38} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
 	EndGlobalSection
 EndGlobal

@@ -17,8 +17,8 @@ properties {
 	$source_dir = "$base_dir\src"
     $tools_dir = "$base_dir\tools"
 
-    $unitTest_path = "$source_dir\ClearMeasure.Bootcamp.UnitTests"
-    $integrationTest_path = "$source_dir\ClearMeasure.Bootcamp.IntegrationTests"
+    $unitTest_path = "$source_dir\$projectName.UnitTests"
+    $loaddata_path = "$source_dir\$projectName.IntegrationTests"
 	
 	$build_dir = "$base_dir\build"
 	$package_dir = "$build_dir\package"	
@@ -26,7 +26,7 @@ properties {
 
     $databaseName = $projectName
     $databaseServer = if([Environment]::GetEnvironmentVariable("dbServer","User") -eq $null) { "localhost\SQLEXPRESS2014" } else { [Environment]::GetEnvironmentVariable("dbServer","User")}
-    $databaseScripts = "$source_dir\Database\scripts"
+    $databaseScripts = "$source_dir\$projectName.Database\scripts"
     $hibernateConfig = "$source_dir\hibernate.cfg.xml"
     $schemaDatabaseName = $databaseName + "_schema"
     $integratedSecurity = "Integrated Security=true"
@@ -39,7 +39,7 @@ properties {
     $webapp_dir = "$source_dir\UI"
 }
 
-task default -depends Init, Compile, RebuildDatabase, Test #, LoadData
+task default -depends Init, Compile, RebuildDatabase, Test, LoadData
 task ci -depends Init, CommonAssemblyInfo, ConnectionString, Compile, RebuildDatabase, Test, Package
 
 task Init {
@@ -64,9 +64,7 @@ task Compile -depends Init {
 
 task Test {
     exec {
-    #### update for dnx . test
         & dnx $unitTest_path test
-        # & $nunitPath\nunit-console.exe $test_dir\$unitTestAssembly /framework:net-4.6 /nologo /xml=$build_dir\TestResult.xml
     }
 }
 
@@ -85,8 +83,7 @@ task RebuildRemoteDatabase {
 
 task LoadData -depends ConnectionString, Compile, RebuildDatabase {
     exec { 
-       ##### update for testing
-		& $nunitPath\nunit-console.exe $test_dir\$integrationTestAssembly /include=DataLoader /nologo /nodots /xml=$build_dir\DataLoadResult.xml
+        dnx $loaddata_path test -trait "Category=DataLoader"
     } "Build failed - data load failure"  
 }
 

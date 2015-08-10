@@ -1,0 +1,239 @@
+{
+  "locked": false,
+  "version": 1,
+  "targets": {
+    "DNX,Version=v4.6": {
+      "Microsoft.Framework.Configuration/1.0.0-beta6": {
+        "dependencies": {
+          "Microsoft.Framework.Configuration.Abstractions": "1.0.0-beta6"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.Framework.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Framework.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Framework.Configuration.Abstractions/1.0.0-beta6": {
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.Framework.Configuration.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Framework.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Framework.Configuration.CommandLine/1.0.0-beta6": {
+        "dependencies": {
+          "Microsoft.Framework.Configuration": "1.0.0-beta6"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.Framework.Configuration.CommandLine.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Framework.Configuration.CommandLine.dll": {}
+        }
+      },
+      "Microsoft.Framework.Configuration.Json/1.0.0-beta6": {
+        "dependencies": {
+          "Microsoft.Framework.Configuration": "1.0.0-beta6",
+          "Newtonsoft.Json": "6.0.6"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.Framework.Configuration.Json.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Framework.Configuration.Json.dll": {}
+        }
+      },
+      "Microsoft.Framework.Configuration.UserSecrets/1.0.0-beta6": {
+        "dependencies": {
+          "Microsoft.Framework.Configuration.Json": "1.0.0-beta6"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.Framework.Configuration.UserSecrets.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Framework.Configuration.UserSecrets.dll": {}
+        }
+      },
+      "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta6": {
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll": {}
+        }
+      },
+      "Newtonsoft.Json/6.0.6": {
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Framework.Configuration/1.0.0-beta6": {
+      "serviceable": true,
+      "sha512": "ZwjPHPgayAxW0Yq4tDa8DoAAEy/nj3hlVV02oO4iOGufIdFTzMW9Frfwa97eJQhDFtsdXxfBecXr9GjaEBsI8g==",
+      "files": [
+        "lib/dnx451/Microsoft.Framework.Configuration.dll",
+        "lib/dnx451/Microsoft.Framework.Configuration.xml",
+        "lib/dotnet/Microsoft.Framework.Configuration.dll",
+        "lib/dotnet/Microsoft.Framework.Configuration.xml",
+        "lib/net45/Microsoft.Framework.Configuration.dll",
+        "lib/net45/Microsoft.Framework.Configuration.xml",
+        "Microsoft.Framework.Configuration.1.0.0-beta6.nupkg",
+        "Microsoft.Framework.Configuration.1.0.0-beta6.nupkg.sha512",
+        "Microsoft.Framework.Configuration.nuspec",
+        "repo.json"
+      ]
+    },
+    "Microsoft.Framework.Configuration.Abstractions/1.0.0-beta6": {
+      "serviceable": true,
+      "sha512": "7Cq77d6Ni3pnMyN4oTfRvf3RHQr8onjUBQ42P8/waazWU5gG9PtjvPTUP2jVc4AdC2LvZNz9D9A8D1/qASYuyw==",
+      "files": [
+        "lib/dnx451/Microsoft.Framework.Configuration.Abstractions.dll",
+        "lib/dnx451/Microsoft.Framework.Configuration.Abstractions.xml",
+        "lib/dotnet/Microsoft.Framework.Configuration.Abstractions.dll",
+        "lib/dotnet/Microsoft.Framework.Configuration.Abstractions.xml",
+        "lib/net45/Microsoft.Framework.Configuration.Abstractions.dll",
+        "lib/net45/Microsoft.Framework.Configuration.Abstractions.xml",
+        "Microsoft.Framework.Configuration.Abstractions.1.0.0-beta6.nupkg",
+        "Microsoft.Framework.Configuration.Abstractions.1.0.0-beta6.nupkg.sha512",
+        "Microsoft.Framework.Configuration.Abstractions.nuspec",
+        "repo.json"
+      ]
+    },
+    "Microsoft.Framework.Configuration.CommandLine/1.0.0-beta6": {
+      "serviceable": true,
+      "sha512": "9DX3AnuzuNl4QZLP/U/zkW03cASmOKJafcAXf1c/DUTJ7nRq9jUyVk9myJYd7+t0nmXXS1majXAHG3oQ/RGfTw==",
+      "files": [
+        "lib/dnx451/Microsoft.Framework.Configuration.CommandLine.dll",
+        "lib/dnx451/Microsoft.Framework.Configuration.CommandLine.xml",
+        "lib/dotnet/Microsoft.Framework.Configuration.CommandLine.dll",
+        "lib/dotnet/Microsoft.Framework.Configuration.CommandLine.xml",
+        "lib/net45/Microsoft.Framework.Configuration.CommandLine.dll",
+        "lib/net45/Microsoft.Framework.Configuration.CommandLine.xml",
+        "Microsoft.Framework.Configuration.CommandLine.1.0.0-beta6.nupkg",
+        "Microsoft.Framework.Configuration.CommandLine.1.0.0-beta6.nupkg.sha512",
+        "Microsoft.Framework.Configuration.CommandLine.nuspec",
+        "repo.json"
+      ]
+    },
+    "Microsoft.Framework.Configuration.Json/1.0.0-beta6": {
+      "serviceable": true,
+      "sha512": "C4kdW1eP2e5d8pAK5iJ9EWHCpnDpBDO/lu22VjFfTekRTes2zCkpJRt3OYUyqmlg8emVHsGM/i8k6Y/oP6eeZg==",
+      "files": [
+        "lib/dnx451/Microsoft.Framework.Configuration.Json.dll",
+        "lib/dnx451/Microsoft.Framework.Configuration.Json.xml",
+        "lib/dotnet/Microsoft.Framework.Configuration.Json.dll",
+        "lib/dotnet/Microsoft.Framework.Configuration.Json.xml",
+        "lib/net45/Microsoft.Framework.Configuration.Json.dll",
+        "lib/net45/Microsoft.Framework.Configuration.Json.xml",
+        "Microsoft.Framework.Configuration.Json.1.0.0-beta6.nupkg",
+        "Microsoft.Framework.Configuration.Json.1.0.0-beta6.nupkg.sha512",
+        "Microsoft.Framework.Configuration.Json.nuspec",
+        "repo.json"
+      ]
+    },
+    "Microsoft.Framework.Configuration.UserSecrets/1.0.0-beta6": {
+      "serviceable": true,
+      "sha512": "RY6YQVlnWnBJWDQq/5gaAekB5u2X0lA/f+4VceJ+i2xhNgMFgWGRWZTJJPs/QnDAdEErtP2FbjjIWsy4b+LMQw==",
+      "files": [
+        "lib/dnx451/Microsoft.Framework.Configuration.UserSecrets.dll",
+        "lib/dnx451/Microsoft.Framework.Configuration.UserSecrets.xml",
+        "lib/dnxcore50/Microsoft.Framework.Configuration.UserSecrets.dll",
+        "lib/dnxcore50/Microsoft.Framework.Configuration.UserSecrets.xml",
+        "Microsoft.Framework.Configuration.UserSecrets.1.0.0-beta6.nupkg",
+        "Microsoft.Framework.Configuration.UserSecrets.1.0.0-beta6.nupkg.sha512",
+        "Microsoft.Framework.Configuration.UserSecrets.nuspec",
+        "repo.json"
+      ]
+    },
+    "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta6": {
+      "serviceable": true,
+      "sha512": "w4Cwg6jgPd3XFGOgBGU3GVGVAwUcMglSDTlI23M8uI7yhDRSDbxZ2HPbjTEBMoj+IYdkfunZWFdA67tdk8L8Tg==",
+      "files": [
+        "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll",
+        "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.xml",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.Abstractions.dll",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.Abstractions.xml",
+        "Microsoft.Framework.Runtime.Abstractions.1.0.0-beta6.nupkg",
+        "Microsoft.Framework.Runtime.Abstractions.1.0.0-beta6.nupkg.sha512",
+        "Microsoft.Framework.Runtime.Abstractions.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/6.0.6": {
+      "sha512": "w26uZNyCG5VeoKiEOJ4+9/o8koSofLKwHl7WLreIcp0U6r57L7WiRXmjp8MTKFw6dYNZ9AE0lw69WYbIhUsU9Q==",
+      "files": [
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netcore45/Newtonsoft.Json.dll",
+        "lib/netcore45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.xml",
+        "Newtonsoft.Json.6.0.6.nupkg",
+        "Newtonsoft.Json.6.0.6.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
+        "tools/install.ps1"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "Microsoft.Framework.Runtime.Abstractions >= 1.0.0-beta6",
+      "Microsoft.Framework.Configuration.Abstractions >= 1.0.0-beta6",
+      "Microsoft.Framework.Configuration.Json >= 1.0.0-beta6",
+      "Microsoft.Framework.Configuration.UserSecrets >= 1.0.0-beta6",
+      "Microsoft.Framework.Configuration.CommandLine >= 1.0.0-beta6"
+    ],
+    "DNX,Version=v4.6": []
+  }
+}

@@ -1,4 +1,5 @@
 ﻿using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Cfg;
 
@@ -58,6 +59,7 @@ namespace ClearMeasure.Bootcamp.DataAccess.Mappings
                             .AddFromAssembly(
                                 typeof (DataContext)
                                     .Assembly))
+                    
                     .BuildConfiguration();
         }
     }
