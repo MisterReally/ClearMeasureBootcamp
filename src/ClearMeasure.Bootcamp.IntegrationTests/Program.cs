@@ -22,7 +22,6 @@ namespace ClearMeasure.Bootcamp.Dnx
         {
             BuildConfiguration(args);
             Console.WriteLine(Configuration.Get("connection.connection_string"));
-            Console.ReadLine();
         }
 
         private void BuildConfiguration(string[] args)
