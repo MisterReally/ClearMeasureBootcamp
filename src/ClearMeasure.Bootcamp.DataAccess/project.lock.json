@@ -174,6 +174,14 @@
         "runtime": {
           "lib/net45/_._": {}
         }
+      },
+      "System.Xml.ReaderWriter/4.0.10-beta-23109": {
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
       }
     },
     "DNX,Version=v4.6": {
@@ -347,6 +355,14 @@
         },
         "runtime": {
           "lib/net45/_._": {}
+        }
+      },
+      "System.Xml.ReaderWriter/4.0.10-beta-23109": {
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
         }
       }
     }
@@ -888,6 +904,29 @@
         "System.Threading.Tasks.4.0.0.nupkg.sha512",
         "System.Threading.Tasks.nuspec"
       ]
+    },
+    "System.Xml.ReaderWriter/4.0.10-beta-23109": {
+      "serviceable": true,
+      "sha512": "H612PfBN+MgpFTLU/Lc7AreFsW821wY4MbcGEA3kHs7YDAXciuQBnjlX/D/xtPOcJde2STIHmj4wpY9FgrkyXQ==",
+      "files": [
+        "lib/dotnet/System.Xml.ReaderWriter.dll",
+        "lib/net46/_._",
+        "ref/dotnet/de/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/es/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/fr/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/it/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ja/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ko/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ru/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/System.Xml.ReaderWriter.dll",
+        "ref/dotnet/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/zh-hans/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/zh-hant/System.Xml.ReaderWriter.xml",
+        "ref/net46/_._",
+        "System.Xml.ReaderWriter.4.0.10-beta-23109.nupkg",
+        "System.Xml.ReaderWriter.4.0.10-beta-23109.nupkg.sha512",
+        "System.Xml.ReaderWriter.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -900,9 +939,14 @@
       "FluentNHibernate >= 2.0.1",
       "Iesi.Collections >= 4.0.1.4000",
       "NHibernate >= 4.0.3.4000",
-      "ClearMeasure.Bootcamp.Core >= 1.0.0-*"
+      "ClearMeasure.Bootcamp.Core >= 1.0.0-*",
+      "System.Xml.ReaderWriter >= 4.0.10-beta-23109"
     ],
-    ".NETFramework,Version=v4.6": [],
-    "DNX,Version=v4.6": []
+    ".NETFramework,Version=v4.6": [
+      "fx/System.Xml >= 4.0.0.0"
+    ],
+    "DNX,Version=v4.6": [
+      "fx/System.Xml >= 4.0.0.0"
+    ]
   }
 }

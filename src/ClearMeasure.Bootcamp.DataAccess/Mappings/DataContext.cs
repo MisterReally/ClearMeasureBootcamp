@@ -1,4 +1,6 @@
-﻿using FluentNHibernate.Cfg;
+﻿using System;
+using System.Xml;
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Cfg;
@@ -9,12 +11,15 @@ namespace ClearMeasure.Bootcamp.DataAccess.Mappings
     {
         private static ISessionFactory _sessionFactory;
         private static bool _startupComplete;
+        private static string _configPath;
 
         private static readonly object _locker =
             new object();
 
-        public static ISession GetTransactedSession()
+        public static ISession GetTransactedSession(string configPath = "")
         {
+            Console.WriteLine(configPath);
+            _configPath = configPath;
             EnsureStartup();
             ISession session = _sessionFactory.OpenSession();
             session.BeginTransaction();
@@ -51,16 +56,27 @@ namespace ClearMeasure.Bootcamp.DataAccess.Mappings
 
         public static Configuration BuildConfiguration()
         {
-            return
-                Fluently.Configure(
+            FluentConfiguration config;
+
+            if (!string.IsNullOrEmpty(_configPath))
+            {
+                config = Fluently.Configure(
+                    new Configuration().Configure(_configPath))
+                    .Mappings(cfg =>
+                        cfg.FluentMappings.AddFromAssembly(typeof(DataContext).Assembly));
+            }
+            else
+            {
+                config = Fluently.Configure(
                     new Configuration().Configure())
                     .Mappings(cfg =>
-                        cfg.FluentMappings
-                            .AddFromAssembly(
-                                typeof (DataContext)
-                                    .Assembly))
+                        cfg.FluentMappings.AddFromAssembly(typeof(DataContext).Assembly));
+            }
+
+            return
+
                     
-                    .BuildConfiguration();
+                    config.BuildConfiguration();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿{
+{
   "title": "ClearMeasure.Bootcamp.DataAccess",
   "version": "1.0.0-*",
   "description": "DataAccess Class Library",
@@ -16,14 +16,22 @@
     "FluentNHibernate": "2.0.1",
     "Iesi.Collections": "4.0.1.4000",
     "NHibernate": "4.0.3.4000",
-    "ClearMeasure.Bootcamp.Core": "1.0.0-*"
+    "ClearMeasure.Bootcamp.Core": "1.0.0-*",
+    "System.Xml.ReaderWriter": "4.0.10-beta-23109"
 
   },
 
   "frameworks": {
-    "net46": { },
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Xml": "4.0.0.0"
+      }
+    },
     "dnx46": {
-      "System.Collections": "4.0.10-beta-23109"
+      "System.Collections": "4.0.10-beta-23109",
+      "frameworkAssemblies": {
+        "System.Xml": "4.0.0.0"
+      }
     }
   }
 }

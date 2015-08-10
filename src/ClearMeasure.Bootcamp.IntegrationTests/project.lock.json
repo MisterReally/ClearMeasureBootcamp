@@ -477,6 +477,14 @@
           "lib/net45/_._": {}
         }
       },
+      "System.Xml.ReaderWriter/4.0.10-beta-23109": {
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
+      },
       "xunit/2.1.0-beta4-build3109": {
         "dependencies": {
           "xunit.assert": "[2.1.0-beta4-build3109]",
@@ -1585,6 +1593,29 @@
         "System.Threading.Tasks.nuspec"
       ]
     },
+    "System.Xml.ReaderWriter/4.0.10-beta-23109": {
+      "serviceable": true,
+      "sha512": "H612PfBN+MgpFTLU/Lc7AreFsW821wY4MbcGEA3kHs7YDAXciuQBnjlX/D/xtPOcJde2STIHmj4wpY9FgrkyXQ==",
+      "files": [
+        "lib/dotnet/System.Xml.ReaderWriter.dll",
+        "lib/net46/_._",
+        "ref/dotnet/de/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/es/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/fr/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/it/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ja/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ko/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ru/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/System.Xml.ReaderWriter.dll",
+        "ref/dotnet/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/zh-hans/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/zh-hant/System.Xml.ReaderWriter.xml",
+        "ref/net46/_._",
+        "System.Xml.ReaderWriter.4.0.10-beta-23109.nupkg",
+        "System.Xml.ReaderWriter.4.0.10-beta-23109.nupkg.sha512",
+        "System.Xml.ReaderWriter.nuspec"
+      ]
+    },
     "xunit/2.1.0-beta4-build3109": {
       "sha512": "mbZVcx4H/rDoiPOaiR9TRQgiBTXiStvjBRemGn96jTEePu7jUS3RDMU7EN0CkrVbw4GNXOqMdafblEOo6U4/NA==",
       "files": [
@@ -1777,6 +1808,8 @@
       "ClearMeasure.Bootcamp.Core >= 1.0.0-*",
       "ClearMeasure.Bootcamp.DataAccess >= 1.0.0-*"
     ],
-    "DNX,Version=v4.6": []
+    "DNX,Version=v4.6": [
+      "fx/System.Xml >= 4.0.0.0"
+    ]
   }
 }

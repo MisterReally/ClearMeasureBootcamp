@@ -31,9 +31,13 @@
   },
   "commands": {
     "test": "xunit.runner.dnx",
-    "dataload" : "ClearMeasure.Bootcamp.IntegrationTests"
+    "dataload": "ClearMeasure.Bootcamp.IntegrationTests"
   },
   "frameworks": {
-    "dnx46": { }
+    "dnx46": {
+      "frameworkAssemblies": {
+        "System.Xml": "4.0.0.0"
+      }
+    }
   }
 }

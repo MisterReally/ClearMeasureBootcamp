@@ -10,12 +10,10 @@ namespace ClearMeasure.Bootcamp.IntegrationTests
 
     public class ZDataLoader
     {
-        [Fact, Trait("Category", "DataLoader")]
         public void PopulateDatabase()
         {
             new DatabaseTester().Clean();
             ISession session = DataContext.GetTransactedSession();
-
 
             //Trainer1
             var jpalermo = new Employee("jpalermo", "Jeffrey", "Palermo", "jeffrey@clear-measure.com");

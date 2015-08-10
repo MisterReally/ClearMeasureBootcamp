@@ -4,9 +4,9 @@ namespace ClearMeasure.Bootcamp.IntegrationTests.DataAccess
 {
     public class DatabaseTester
     {
-        public void Clean()
+        public void Clean(string configPath = "")
         {
-            new DatabaseEmptier(DataContext.GetTransactedSession().SessionFactory).DeleteAllData();
+            new DatabaseEmptier(DataContext.GetTransactedSession(configPath).SessionFactory).DeleteAllData();
         }
     }
 }
