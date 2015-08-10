@@ -18,7 +18,7 @@ properties {
     $tools_dir = "$base_dir\tools"
 
     $unitTest_path = "$source_dir\$projectName.UnitTests"
-    $loaddata_path = "$source_dir\$projectName.IntegrationTests"
+    $integrationTest_path = "$source_dir\$projectName.IntegrationTests"
 	
 	$build_dir = "$base_dir\build"
 	$package_dir = "$build_dir\package"	
@@ -83,7 +83,7 @@ task RebuildRemoteDatabase {
 
 task LoadData -depends ConnectionString, Compile, RebuildDatabase {
     exec { 
-        dnx $loaddata_path test -trait "Category=DataLoader"
+        dnx $integrationTest_path dataload
     } "Build failed - data load failure"  
 }
 

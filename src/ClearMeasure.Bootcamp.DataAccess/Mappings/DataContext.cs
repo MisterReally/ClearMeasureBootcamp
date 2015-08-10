@@ -18,7 +18,6 @@ namespace ClearMeasure.Bootcamp.DataAccess.Mappings
 
         public static ISession GetTransactedSession(string configPath = "")
         {
-            Console.WriteLine(configPath);
             _configPath = configPath;
             EnsureStartup();
             ISession session = _sessionFactory.OpenSession();

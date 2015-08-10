@@ -1,7 +1,4 @@
 ﻿{
-  "connection.driver_class": "NHibernate.Driver.SqlClientDriver",
-  "connection.connection_string": "server=(LocalDb)\\v11.0;database=ClearMeasure.Bootcamp;Integrated Security=true;",
-  "show_sql": false,
-  "dialect": "NHibernate.Dialect.MsSql2005Dialect",
-  "adonet.batch_size": 100
+  // you can specify a custom path here to the NHibernate config, or pass it in on the commandline
+  //"configPath": "c:\\hibernate.cfg.xml"
 }
