@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Web.Mvc;
 using ClearMeasure.Bootcamp.Core;
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Plugins.DataAccess;
 using ClearMeasure.Bootcamp.Core.Services;
+using Microsoft.AspNet.Mvc.Rendering;
 
 namespace ClearMeasure.Bootcamp.UI.Models.SelectListProviders
 {
@@ -16,22 +16,23 @@ namespace ClearMeasure.Bootcamp.UI.Models.SelectListProviders
 
         public static IEnumerable<SelectListItem> GetOptions(string selected)
         {
-            var bus = DependencyResolver.Current.GetService<Bus>();
+            // todo: target for MVC6 rework
+            //var bus = DependencyResolver.Current.GetService<Bus>();
 
             var result = new List<SelectListItem>();
 
             var empSpec = new EmployeeSpecificationQuery();
-            Employee[] employees = bus.Send(empSpec).Results;
+            //Employee[] employees = bus.Send(empSpec).Results;
 
-            foreach (Employee employee in employees)
-            {
-                result.Add(new SelectListItem
-                {
-                    Text = employee.GetFullName(),
-                    Value = employee.UserName,
-                    Selected = (employee.UserName == selected)
-                });
-            }
+            //foreach (Employee employee in employees)
+            //{
+            //    result.Add(new SelectListItem
+            //    {
+            //        Text = employee.GetFullName(),
+            //        Value = employee.UserName,
+            //        Selected = (employee.UserName == selected)
+            //    });
+            //}
 
             return result;
         }

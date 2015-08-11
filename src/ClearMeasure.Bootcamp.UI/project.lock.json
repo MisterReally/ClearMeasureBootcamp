@@ -3,26 +3,6 @@
   "version": 1,
   "targets": {
     "DNX,Version=v4.6": {
-      "EntityFramework.Commands/7.0.0-beta6": {
-        "dependencies": {
-          "EntityFramework.Relational.Design": "7.0.0-beta6",
-          "Microsoft.AspNet.Hosting": "1.0.0-beta6",
-          "Microsoft.Framework.DependencyInjection.Abstractions": "1.0.0-beta6",
-          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/EntityFramework.Commands.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/EntityFramework.Commands.dll": {}
-        }
-      },
       "EntityFramework.Core/7.0.0-beta6": {
         "dependencies": {
           "Ix-Async": "1.2.4",
@@ -81,46 +61,6 @@
         },
         "runtime": {
           "lib/net45/EntityFramework.Relational.dll": {}
-        }
-      },
-      "EntityFramework.Relational.Design/7.0.0-beta6": {
-        "dependencies": {
-          "EntityFramework.Relational": "7.0.0-beta6",
-          "Microsoft.AspNet.Razor": "4.0.0-beta6",
-          "Microsoft.CodeAnalysis.CSharp": "1.0.0",
-          "Microsoft.Framework.Runtime.Roslyn": "1.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core",
-          "System.IO",
-          "System.Text.Encoding",
-          "System.Threading.Tasks"
-        ],
-        "compile": {
-          "lib/dnx451/EntityFramework.Relational.Design.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/EntityFramework.Relational.Design.dll": {}
-        }
-      },
-      "EntityFramework.SqlServer/7.0.0-beta6": {
-        "dependencies": {
-          "EntityFramework.Relational": "7.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/net45/EntityFramework.SqlServer.dll": {}
-        },
-        "runtime": {
-          "lib/net45/EntityFramework.SqlServer.dll": {}
         }
       },
       "Iesi.Collections/4.0.1.4000": {
@@ -206,97 +146,6 @@
           "lib/dnx451/Microsoft.AspNet.Authentication.Cookies.dll": {}
         }
       },
-      "Microsoft.AspNet.Authentication.Facebook/1.0.0-beta6": {
-        "dependencies": {
-          "Microsoft.AspNet.Authentication.OAuth": "1.0.0-beta6",
-          "Newtonsoft.Json": "6.0.6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Authentication.Facebook.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Authentication.Facebook.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Authentication.Google/1.0.0-beta6": {
-        "dependencies": {
-          "Microsoft.AspNet.Authentication.OAuth": "1.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Authentication.Google.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Authentication.Google.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Authentication.MicrosoftAccount/1.0.0-beta6": {
-        "dependencies": {
-          "Microsoft.AspNet.Authentication.OAuth": "1.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Authentication.MicrosoftAccount.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Authentication.MicrosoftAccount.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Authentication.OAuth/1.0.0-beta6": {
-        "dependencies": {
-          "Microsoft.AspNet.Authentication": "1.0.0-beta6",
-          "Newtonsoft.Json": "6.0.6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core",
-          "System.Net.Http",
-          "System.Net.Http.WebRequest"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Authentication.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Authentication.OAuth.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Authentication.Twitter/1.0.0-beta6": {
-        "dependencies": {
-          "Microsoft.AspNet.Authentication": "1.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core",
-          "System.Net.Http",
-          "System.Net.Http.WebRequest"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Authentication.Twitter.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Authentication.Twitter.dll": {}
-        }
-      },
       "Microsoft.AspNet.Authorization/1.0.0-beta6": {
         "dependencies": {
           "Microsoft.AspNet.Http.Features": "1.0.0-beta6",
@@ -348,23 +197,6 @@
         },
         "runtime": {
           "lib/dnx451/Microsoft.AspNet.Cryptography.Internal.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Cryptography.KeyDerivation/1.0.0-beta6": {
-        "dependencies": {
-          "Microsoft.AspNet.Cryptography.Internal": "1.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Cryptography.KeyDerivation.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Cryptography.KeyDerivation.dll": {}
         }
       },
       "Microsoft.AspNet.DataProtection/1.0.0-beta6": {
@@ -665,45 +497,6 @@
         },
         "runtime": {
           "lib/dnx451/Microsoft.AspNet.Http.Features.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity/3.0.0-beta6": {
-        "dependencies": {
-          "Microsoft.AspNet.Authentication.Cookies": "1.0.0-beta6",
-          "Microsoft.AspNet.Cryptography.KeyDerivation": "1.0.0-beta6",
-          "Microsoft.AspNet.DataProtection": "1.0.0-beta6",
-          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Identity.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Identity.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.EntityFramework/3.0.0-beta6": {
-        "dependencies": {
-          "EntityFramework.SqlServer": "7.0.0-beta6",
-          "Microsoft.AspNet.Identity": "3.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core",
-          "System.Threading.Tasks"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Identity.EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Identity.EntityFramework.dll": {}
         }
       },
       "Microsoft.AspNet.JsonPatch/1.0.0-beta6": {
@@ -1562,46 +1355,6 @@
           "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll": {}
         }
       },
-      "Microsoft.Framework.Runtime.Caching/1.0.0-beta6": {
-        "dependencies": {
-          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Framework.Runtime.Caching.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Framework.Runtime.Caching.dll": {}
-        }
-      },
-      "Microsoft.Framework.Runtime.Roslyn/1.0.0-beta6": {
-        "dependencies": {
-          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta6",
-          "Microsoft.Framework.Runtime.Caching": "1.0.0-beta6",
-          "Microsoft.Framework.Runtime.Roslyn.Abstractions": "1.0.0-beta6"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Collections",
-          "System.Core",
-          "System.IO",
-          "System.Text.Encoding",
-          "System.Threading.Tasks"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Framework.Runtime.Roslyn.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Framework.Runtime.Roslyn.dll": {}
-        }
-      },
       "Microsoft.Framework.Runtime.Roslyn.Abstractions/1.0.0-beta6": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "1.0.0",
@@ -1917,34 +1670,6 @@
     }
   },
   "libraries": {
-    "EntityFramework.Commands/7.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "dA1n8i0OdiPm73ev6WmgmoVr9jJSJ1tOW+m6W8iMFmnUydpLhZrV6pbyMHUkr1OQUJztz3jIOMsAJHSsESge+w==",
-      "files": [
-        "app/ef",
-        "app/ef.cmd",
-        "app/project.json",
-        "build/netcore50/EntityFramework.Commands.targets",
-        "EntityFramework.Commands.7.0.0-beta6.nupkg",
-        "EntityFramework.Commands.7.0.0-beta6.nupkg.sha512",
-        "EntityFramework.Commands.nuspec",
-        "lib/dnx451/EntityFramework.Commands.dll",
-        "lib/dnx451/EntityFramework.Commands.xml",
-        "lib/dnxcore50/EntityFramework.Commands.dll",
-        "lib/dnxcore50/EntityFramework.Commands.xml",
-        "lib/net45/EntityFramework.Commands.dll",
-        "lib/net45/EntityFramework.Commands.xml",
-        "lib/netcore50/_._",
-        "repo.json",
-        "tools/about_EntityFramework.help.txt",
-        "tools/EntityFramework.psd1",
-        "tools/EntityFramework.psm1",
-        "tools/Handlers.cs",
-        "tools/IHandlers.cs",
-        "tools/init.ps1",
-        "tools/install.ps1"
-      ]
-    },
     "EntityFramework.Core/7.0.0-beta6": {
       "serviceable": true,
       "sha512": "Jm2bIl5HvtXnbHCIvaYkksw8UQzD8bYovqGH2wMgIztj8cKYQ2I9ziwnWnV3f+/tqcdEHtRl929DJO54zV+3eg==",
@@ -1972,36 +1697,6 @@
         "lib/dotnet/EntityFramework.Relational.xml",
         "lib/net45/EntityFramework.Relational.dll",
         "lib/net45/EntityFramework.Relational.xml",
-        "repo.json"
-      ]
-    },
-    "EntityFramework.Relational.Design/7.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "q1zyhQPHpxKvwh4H3+GRGtVVxc7uD8IdNwNEtral7gd/RJJSjiZfpJNl6hbboEOapLHkZh+roPLLSSAKc2pVQg==",
-      "files": [
-        "EntityFramework.Relational.Design.7.0.0-beta6.nupkg",
-        "EntityFramework.Relational.Design.7.0.0-beta6.nupkg.sha512",
-        "EntityFramework.Relational.Design.nuspec",
-        "lib/dnx451/EntityFramework.Relational.Design.dll",
-        "lib/dnx451/EntityFramework.Relational.Design.xml",
-        "lib/dnxcore50/EntityFramework.Relational.Design.dll",
-        "lib/dnxcore50/EntityFramework.Relational.Design.xml",
-        "lib/net45/EntityFramework.Relational.Design.dll",
-        "lib/net45/EntityFramework.Relational.Design.xml",
-        "repo.json"
-      ]
-    },
-    "EntityFramework.SqlServer/7.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "69BvxKYVxgO/LK5YTKo9iuK4rt2/ystXVWdHfl3JaZ8DASB+UTacNNDDYeHuo2ZqQCv523AZSReuBGZ5reGBOg==",
-      "files": [
-        "EntityFramework.SqlServer.7.0.0-beta6.nupkg",
-        "EntityFramework.SqlServer.7.0.0-beta6.nupkg.sha512",
-        "EntityFramework.SqlServer.nuspec",
-        "lib/dnxcore50/EntityFramework.SqlServer.dll",
-        "lib/dnxcore50/EntityFramework.SqlServer.xml",
-        "lib/net45/EntityFramework.SqlServer.dll",
-        "lib/net45/EntityFramework.SqlServer.xml",
         "repo.json"
       ]
     },
@@ -2071,76 +1766,6 @@
         "repo.json"
       ]
     },
-    "Microsoft.AspNet.Authentication.Facebook/1.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "Ts4bJvGF+41XKke3wphUnrCxFAPiYqKJBRohT4UH0A9kVWZpmIMB7X1tWH+bM1/MXBEDZYndWm7dmI8REXVyww==",
-      "files": [
-        "lib/dnx451/Microsoft.AspNet.Authentication.Facebook.dll",
-        "lib/dnx451/Microsoft.AspNet.Authentication.Facebook.xml",
-        "lib/dnxcore50/Microsoft.AspNet.Authentication.Facebook.dll",
-        "lib/dnxcore50/Microsoft.AspNet.Authentication.Facebook.xml",
-        "Microsoft.AspNet.Authentication.Facebook.1.0.0-beta6.nupkg",
-        "Microsoft.AspNet.Authentication.Facebook.1.0.0-beta6.nupkg.sha512",
-        "Microsoft.AspNet.Authentication.Facebook.nuspec",
-        "repo.json"
-      ]
-    },
-    "Microsoft.AspNet.Authentication.Google/1.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "L4ErciYGoeSmPmMFqwm+4HcS7wbPE7eZnJ7/oUep6pgF1EiJF5EZl5kWpsB+fUv4v3+/MxBnCX1v38SpoY7nJg==",
-      "files": [
-        "lib/dnx451/Microsoft.AspNet.Authentication.Google.dll",
-        "lib/dnx451/Microsoft.AspNet.Authentication.Google.xml",
-        "lib/dnxcore50/Microsoft.AspNet.Authentication.Google.dll",
-        "lib/dnxcore50/Microsoft.AspNet.Authentication.Google.xml",
-        "Microsoft.AspNet.Authentication.Google.1.0.0-beta6.nupkg",
-        "Microsoft.AspNet.Authentication.Google.1.0.0-beta6.nupkg.sha512",
-        "Microsoft.AspNet.Authentication.Google.nuspec",
-        "repo.json"
-      ]
-    },
-    "Microsoft.AspNet.Authentication.MicrosoftAccount/1.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "evQtrUuF8VCHodcvVJcr9K9MtaVQlmENim9VIrAfgE+ewnA4e1PEor9aTdXqMTaa8JHiE/iULS7FcifpjpYsyw==",
-      "files": [
-        "lib/dnx451/Microsoft.AspNet.Authentication.MicrosoftAccount.dll",
-        "lib/dnx451/Microsoft.AspNet.Authentication.MicrosoftAccount.xml",
-        "lib/dnxcore50/Microsoft.AspNet.Authentication.MicrosoftAccount.dll",
-        "lib/dnxcore50/Microsoft.AspNet.Authentication.MicrosoftAccount.xml",
-        "Microsoft.AspNet.Authentication.MicrosoftAccount.1.0.0-beta6.nupkg",
-        "Microsoft.AspNet.Authentication.MicrosoftAccount.1.0.0-beta6.nupkg.sha512",
-        "Microsoft.AspNet.Authentication.MicrosoftAccount.nuspec",
-        "repo.json"
-      ]
-    },
-    "Microsoft.AspNet.Authentication.OAuth/1.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "2t8TG8Lh2gor/oFVnwPihObac8Fyu0kWTdiy9VCIzKQe0fXOAe3e2DqtkHB7e33E+HInGSMPjicjfxZjC/YOjw==",
-      "files": [
-        "lib/dnx451/Microsoft.AspNet.Authentication.OAuth.dll",
-        "lib/dnx451/Microsoft.AspNet.Authentication.OAuth.xml",
-        "lib/dnxcore50/Microsoft.AspNet.Authentication.OAuth.dll",
-        "lib/dnxcore50/Microsoft.AspNet.Authentication.OAuth.xml",
-        "Microsoft.AspNet.Authentication.OAuth.1.0.0-beta6.nupkg",
-        "Microsoft.AspNet.Authentication.OAuth.1.0.0-beta6.nupkg.sha512",
-        "Microsoft.AspNet.Authentication.OAuth.nuspec",
-        "repo.json"
-      ]
-    },
-    "Microsoft.AspNet.Authentication.Twitter/1.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "+ghiNO51QTezE+Fz1nUlxPmYB5twW10FXeSpymWTGegT+zm1HEYT/20T/3dp9Fp33I0R4mL/ErNMUyjCNHeqtQ==",
-      "files": [
-        "lib/dnx451/Microsoft.AspNet.Authentication.Twitter.dll",
-        "lib/dnx451/Microsoft.AspNet.Authentication.Twitter.xml",
-        "lib/dnxcore50/Microsoft.AspNet.Authentication.Twitter.dll",
-        "lib/dnxcore50/Microsoft.AspNet.Authentication.Twitter.xml",
-        "Microsoft.AspNet.Authentication.Twitter.1.0.0-beta6.nupkg",
-        "Microsoft.AspNet.Authentication.Twitter.1.0.0-beta6.nupkg.sha512",
-        "Microsoft.AspNet.Authentication.Twitter.nuspec",
-        "repo.json"
-      ]
-    },
     "Microsoft.AspNet.Authorization/1.0.0-beta6": {
       "serviceable": true,
       "sha512": "5H1hF32Cx8fI8qIiF7IVKamRdyHqxqyyql0bjlMEyI8fGAz76j3gqRD3V37Up/EMdnZpO6zMAl8swu5f67NjZw==",
@@ -2182,22 +1807,6 @@
         "Microsoft.AspNet.Cryptography.Internal.1.0.0-beta6.nupkg",
         "Microsoft.AspNet.Cryptography.Internal.1.0.0-beta6.nupkg.sha512",
         "Microsoft.AspNet.Cryptography.Internal.nuspec",
-        "repo.json"
-      ]
-    },
-    "Microsoft.AspNet.Cryptography.KeyDerivation/1.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "dRYCp+Bqxc3HlZw+l9cpIzfevTH8aZxD/X5U7NzV8lYPuImfaYKK5l8h0hHS2TRoVrPZfaBYrZBFHMCWaS23ig==",
-      "files": [
-        "lib/dnx451/Microsoft.AspNet.Cryptography.KeyDerivation.dll",
-        "lib/dnx451/Microsoft.AspNet.Cryptography.KeyDerivation.xml",
-        "lib/dnxcore50/Microsoft.AspNet.Cryptography.KeyDerivation.dll",
-        "lib/dnxcore50/Microsoft.AspNet.Cryptography.KeyDerivation.xml",
-        "lib/net451/Microsoft.AspNet.Cryptography.KeyDerivation.dll",
-        "lib/net451/Microsoft.AspNet.Cryptography.KeyDerivation.xml",
-        "Microsoft.AspNet.Cryptography.KeyDerivation.1.0.0-beta6.nupkg",
-        "Microsoft.AspNet.Cryptography.KeyDerivation.1.0.0-beta6.nupkg.sha512",
-        "Microsoft.AspNet.Cryptography.KeyDerivation.nuspec",
         "repo.json"
       ]
     },
@@ -2430,34 +2039,6 @@
         "Microsoft.AspNet.Http.Features.1.0.0-beta6.nupkg",
         "Microsoft.AspNet.Http.Features.1.0.0-beta6.nupkg.sha512",
         "Microsoft.AspNet.Http.Features.nuspec",
-        "repo.json"
-      ]
-    },
-    "Microsoft.AspNet.Identity/3.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "RBWTV6m39f4XkUCrDgYbKojAU2B26fcVPpujcOq9cLUh0aWle7fKvmXUadZ+JPgcCvRKep6hQ87C8ATJHyi0MA==",
-      "files": [
-        "lib/dnx451/Microsoft.AspNet.Identity.dll",
-        "lib/dnx451/Microsoft.AspNet.Identity.xml",
-        "lib/dnxcore50/Microsoft.AspNet.Identity.dll",
-        "lib/dnxcore50/Microsoft.AspNet.Identity.xml",
-        "Microsoft.AspNet.Identity.3.0.0-beta6.nupkg",
-        "Microsoft.AspNet.Identity.3.0.0-beta6.nupkg.sha512",
-        "Microsoft.AspNet.Identity.nuspec",
-        "repo.json"
-      ]
-    },
-    "Microsoft.AspNet.Identity.EntityFramework/3.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "lNilMoqz5oog3jT39c+SY5ngXYYJY+ZJcorxgM2TpMZJa2JocJRyiTpJzrnx4RppNvHO/McIBLKbazJ6Zva9jQ==",
-      "files": [
-        "lib/dnx451/Microsoft.AspNet.Identity.EntityFramework.dll",
-        "lib/dnx451/Microsoft.AspNet.Identity.EntityFramework.xml",
-        "lib/dnxcore50/Microsoft.AspNet.Identity.EntityFramework.dll",
-        "lib/dnxcore50/Microsoft.AspNet.Identity.EntityFramework.xml",
-        "Microsoft.AspNet.Identity.EntityFramework.3.0.0-beta6.nupkg",
-        "Microsoft.AspNet.Identity.EntityFramework.3.0.0-beta6.nupkg.sha512",
-        "Microsoft.AspNet.Identity.EntityFramework.nuspec",
         "repo.json"
       ]
     },
@@ -3206,31 +2787,6 @@
         "Microsoft.Framework.Runtime.Abstractions.nuspec"
       ]
     },
-    "Microsoft.Framework.Runtime.Caching/1.0.0-beta6": {
-      "sha512": "+y/7JAz5lC3cmxeNe88Bi80jw6gA2f092y7vk8J6GXOWcUV+I3QoBl0p2Hne5T2YDfZALtzuyVGqsXIaM1X93A==",
-      "files": [
-        "lib/dnx451/Microsoft.Framework.Runtime.Caching.dll",
-        "lib/dnx451/Microsoft.Framework.Runtime.Caching.xml",
-        "lib/dnxcore50/Microsoft.Framework.Runtime.Caching.dll",
-        "lib/dnxcore50/Microsoft.Framework.Runtime.Caching.xml",
-        "Microsoft.Framework.Runtime.Caching.1.0.0-beta6.nupkg",
-        "Microsoft.Framework.Runtime.Caching.1.0.0-beta6.nupkg.sha512",
-        "Microsoft.Framework.Runtime.Caching.nuspec"
-      ]
-    },
-    "Microsoft.Framework.Runtime.Roslyn/1.0.0-beta6": {
-      "serviceable": true,
-      "sha512": "P15pRq5zhTX6VB3yKJATfHf9/QpLSJZRnof81fj0BlEx0sTZdYVojbd1FSLKaG8aKb0B82TZrwk49UqIsKvSMA==",
-      "files": [
-        "lib/dnx451/Microsoft.Framework.Runtime.Roslyn.dll",
-        "lib/dnx451/Microsoft.Framework.Runtime.Roslyn.xml",
-        "lib/dnxcore50/Microsoft.Framework.Runtime.Roslyn.dll",
-        "lib/dnxcore50/Microsoft.Framework.Runtime.Roslyn.xml",
-        "Microsoft.Framework.Runtime.Roslyn.1.0.0-beta6.nupkg",
-        "Microsoft.Framework.Runtime.Roslyn.1.0.0-beta6.nupkg.sha512",
-        "Microsoft.Framework.Runtime.Roslyn.nuspec"
-      ]
-    },
     "Microsoft.Framework.Runtime.Roslyn.Abstractions/1.0.0-beta6": {
       "serviceable": true,
       "sha512": "gEHCvzynTJl20HUNR0Ag2K5i07oQUk+XIakcagbS6dsz7SQO2YFPmCoxUAp4puqjfsb4XZ8koZHQfLsEDGJd2A==",
@@ -3865,18 +3421,11 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "EntityFramework.SqlServer >= 7.0.0-beta6",
-      "EntityFramework.Commands >= 7.0.0-beta6",
       "Microsoft.AspNet.Mvc >= 6.0.0-beta6",
       "Microsoft.AspNet.Mvc.TagHelpers >= 6.0.0-beta6",
       "Microsoft.AspNet.Authentication.Cookies >= 1.0.0-beta6",
-      "Microsoft.AspNet.Authentication.Facebook >= 1.0.0-beta6",
-      "Microsoft.AspNet.Authentication.Google >= 1.0.0-beta6",
-      "Microsoft.AspNet.Authentication.MicrosoftAccount >= 1.0.0-beta6",
-      "Microsoft.AspNet.Authentication.Twitter >= 1.0.0-beta6",
       "Microsoft.AspNet.Diagnostics >= 1.0.0-beta6",
       "Microsoft.AspNet.Diagnostics.Entity >= 7.0.0-beta6",
-      "Microsoft.AspNet.Identity.EntityFramework >= 3.0.0-beta6",
       "Microsoft.AspNet.Server.IIS >= 1.0.0-beta6",
       "Microsoft.AspNet.Server.WebListener >= 1.0.0-beta6",
       "Microsoft.AspNet.StaticFiles >= 1.0.0-beta6",

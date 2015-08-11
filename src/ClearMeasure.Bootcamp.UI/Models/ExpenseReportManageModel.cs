@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
 using ClearMeasure.Bootcamp.Core.Model;
 using UI.Models;
+using Microsoft.AspNet.Mvc;
 
 namespace ClearMeasure.Bootcamp.UI.Models
 {
