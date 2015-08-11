@@ -1,0 +1,7 @@
+{
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-ClearMeasure.Bootcamp.UI-559290c5-406a-4acf-a3a9-4899b5755906;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}

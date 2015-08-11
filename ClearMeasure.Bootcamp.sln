@@ -21,6 +21,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClearMeasure.Bootcamp.Datab
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClearMeasure.Bootcamp.IntegrationTests", "src\ClearMeasure.Bootcamp.IntegrationTests\ClearMeasure.Bootcamp.IntegrationTests.xproj", "{10DB5554-83C8-4478-A5FA-422F72DA1451}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClearMeasure.Bootcamp.UI", "src\ClearMeasure.Bootcamp.UI\ClearMeasure.Bootcamp.UI.xproj", "{184422AA-41D6-4B75-8C62-D4D546F9A611}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10DB5554-83C8-4478-A5FA-422F72DA1451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184422AA-41D6-4B75-8C62-D4D546F9A611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184422AA-41D6-4B75-8C62-D4D546F9A611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184422AA-41D6-4B75-8C62-D4D546F9A611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184422AA-41D6-4B75-8C62-D4D546F9A611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,5 +63,6 @@ Global
 		{B509520C-61EB-4098-9CC3-6E1E206C92B9} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
 		{3D716DCD-387E-4E3D-8B28-B149643BD109} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
 		{10DB5554-83C8-4478-A5FA-422F72DA1451} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
+		{184422AA-41D6-4B75-8C62-D4D546F9A611} = {1852BDF6-EFB2-44CF-B567-EE14E84294F2}
 	EndGlobalSection
 EndGlobal
