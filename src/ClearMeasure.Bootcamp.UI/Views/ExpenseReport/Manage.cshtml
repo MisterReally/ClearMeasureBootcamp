@@ -1,5 +1,5 @@
 ﻿
-@using System.Activities.Expressions
+@*@using System.Activities.Expressions*@
 @using ClearMeasure.Bootcamp.Core.Model
 @using ClearMeasure.Bootcamp.Core.Model.ExpenseReportWorkflow
 @using ClearMeasure.Bootcamp.Core.Services
@@ -97,10 +97,11 @@
                             }
                             else
                             {
-                                foreach (IStateCommand command in Html.GetValidCommands((ExpenseReport)ViewBag.ExpenseReport, (Employee)ViewBag.CurrentUser))
+                                <text>TODO - manage.cshtml</text>
+                                @*foreach (IStateCommand command in Html.GetValidCommands((ExpenseReport)ViewBag.ExpenseReport, (Employee)ViewBag.CurrentUser))
                                 {
                                     <button class="btn btn-default" type="submit" name="command" value="@command.TransitionVerbPresentTense">@command.TransitionVerbPresentTense</button>
-                                }
+                                }*@
                             }
                         </div>
                     </div>
@@ -120,7 +121,7 @@
                 </tr>
             </thead>
             <tbody>
-                @{ int i = 0;
+                @{ 
                     foreach (var auditEntry in Model.ExpenseReport.GetAuditEntries())
                     {
                     <tr>
