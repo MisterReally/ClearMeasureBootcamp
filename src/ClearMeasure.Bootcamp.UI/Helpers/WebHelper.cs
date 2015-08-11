@@ -13,7 +13,7 @@ namespace ClearMeasure.Bootcamp.UI.Helpers
     {
          public static IStateCommand[] GetValidCommands(this HtmlHelper helper, ExpenseReport expenseReport, Employee employee)
          {
-            // todo: target for MVC6 rework
+            // todo: target for MVC6 rework -DependencyResolver
 
             throw new NotImplementedException();
             //var facilitator = DependencyResolver.Current.GetService<IWorkflowFacilitator>();
@@ -23,7 +23,7 @@ namespace ClearMeasure.Bootcamp.UI.Helpers
 
         public static Employee GetCurrentUser(this HtmlHelper helper)
         {
-            // todo: target for MVC6 rework
+            // todo: target for MVC6 rework -identity
             throw new NotImplementedException();
 
             //return new UserSession().GetCurrentUser();

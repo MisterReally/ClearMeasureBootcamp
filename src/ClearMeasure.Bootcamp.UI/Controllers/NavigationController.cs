@@ -13,7 +13,7 @@ namespace ClearMeasure.Bootcamp.UI.Controllers
             _session = session;
         }
 
-        // todo: target for MVC6 rework
+        // todo: target for MVC6 rework - child action
         //[ChildActionOnly]
         public ActionResult Menu()
         {

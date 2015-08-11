@@ -13,7 +13,7 @@ using Microsoft.AspNet.Authorization;
 
 namespace ClearMeasure.Bootcamp.UI.Controllers
 {
-    // todo: target for MVC6 rework
+    // todo: target for MVC6 rework -action filter
     //[AddUserMetaDataToViewData]
     [Authorize]
     public class ExpenseReportController : Controller

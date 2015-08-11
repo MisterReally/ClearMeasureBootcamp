@@ -18,7 +18,7 @@ namespace ClearMeasure.Bootcamp.UI.Controllers
             _bus = bus;
         }
 
-        // todo: target for MVC6 rework
+        // todo: target for MVC6 rework - child action
         //[ChildActionOnly]
         public ActionResult Index()
         {

@@ -20,7 +20,7 @@ namespace ClearMeasure.Bootcamp.UI.Services
             _bus = bus;
         }
 
-        // todo: target for MVC6 rework
+        // todo: target for MVC6 rework -DependencyResolver
         //public UserSession() : this(DependencyResolver.Current.GetService<Bus>())
         //{
         //}
@@ -29,7 +29,7 @@ namespace ClearMeasure.Bootcamp.UI.Services
 
         public Employee GetCurrentUser()
         {
-            // todo: target for MVC6 rework
+            // todo: target for MVC6 rework - identity/owin context  
             throw new NotImplementedException();
 
             //IOwinContext context = HttpContext.Current.GetOwinContext();
@@ -54,7 +54,7 @@ namespace ClearMeasure.Bootcamp.UI.Services
                 new Claim(ClaimTypes.Email, employee.EmailAddress)
             };
 
-            // todo: target for MVC6 rework
+            // todo: target for MVC6 rework - identity/owin context
             throw new NotImplementedException();
 
             //var id = new ClaimsIdentity(claims,
@@ -67,7 +67,7 @@ namespace ClearMeasure.Bootcamp.UI.Services
 
         public void LogOut()
         {
-            // todo: target for MVC6 rework
+            // todo: target for MVC6 rework - identity/owin context
             throw new NotImplementedException();
 
             //var context = HttpContext.Current.GetOwinContext();

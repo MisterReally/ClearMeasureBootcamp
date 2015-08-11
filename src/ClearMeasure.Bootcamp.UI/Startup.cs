@@ -76,7 +76,7 @@ namespace ClearMeasure.Bootcamp.UI
             app.UseStaticFiles();
 
             // Add cookie-based authentication to the request pipeline.
-            // todo: target for MVC6 rework
+            // todo: target for MVC6 rework - identity/owin context
 
             // Add authentication middleware to the request pipeline. You can configure options such as Id and Secret in the ConfigureServices method.
             // For more information see http://go.microsoft.com/fwlink/?LinkID=532715

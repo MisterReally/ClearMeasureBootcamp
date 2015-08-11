@@ -16,7 +16,7 @@ namespace ClearMeasure.Bootcamp.UI.Models.SelectListProviders
 
         public static IEnumerable<SelectListItem> GetOptions(string selected)
         {
-            // todo: target for MVC6 rework
+            // todo: target for MVC6 rework -DependencyResolver
             //var bus = DependencyResolver.Current.GetService<Bus>();
 
             var result = new List<SelectListItem>();

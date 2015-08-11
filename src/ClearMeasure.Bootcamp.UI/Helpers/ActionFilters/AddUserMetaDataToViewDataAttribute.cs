@@ -9,7 +9,7 @@ namespace ClearMeasure.Bootcamp.UI.Helpers.ActionFilters
     {
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            // todo: target for MVC6 rework
+            // todo: target for MVC6 rework -DependencyResolver
 
             //var userSession = DependencyResolver.Current.GetService<IUserSession>();
             //Employee currentUser = userSession.GetCurrentUser();
