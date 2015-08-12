@@ -4,14 +4,15 @@ using ClearMeasure.Bootcamp.Core.Model.ExpenseReportWorkflow;
 using ClearMeasure.Bootcamp.Core.Plugins.DataAccess;
 using ClearMeasure.Bootcamp.Core.Services;
 using ClearMeasure.Bootcamp.Core.Services.Impl;
+using MediatR;
 
 namespace ClearMeasure.Bootcamp.Core.Features.Workflow
 {
     public class ExecuteTransitionCommandHandler : IRequestHandler<ExecuteTransitionCommand, ExecuteTransitionResult>
     {
-        private readonly Bus _bus;
+        private readonly IMediator _bus;
 
-        public ExecuteTransitionCommandHandler(Bus bus)
+        public ExecuteTransitionCommandHandler(IMediator bus)
         {
             _bus = bus;
         }

@@ -10,6 +10,7 @@ using ClearMeasure.Bootcamp.UI.Models;
 using UI.Models;
 using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Authorization;
+using MediatR;
 
 namespace ClearMeasure.Bootcamp.UI.Controllers
 {
@@ -21,11 +22,11 @@ namespace ClearMeasure.Bootcamp.UI.Controllers
         private readonly IExpenseReportBuilder _expenseReportBuilder;
         private readonly IUserSession _session;
         private readonly IWorkflowFacilitator _workflowFacilitator;
-        private readonly Bus _bus;
+        private readonly IMediator _bus;
         private readonly ICalendar _calendar;
 
         public ExpenseReportController(IExpenseReportBuilder expenseReportBuilder, IUserSession session,
-            IWorkflowFacilitator workflowFacilitator, Bus bus, ICalendar calendar)
+            IWorkflowFacilitator workflowFacilitator, IMediator bus, ICalendar calendar)
         {
             _expenseReportBuilder = expenseReportBuilder;
             _session = session;

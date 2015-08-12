@@ -1,5 +1,6 @@
 ﻿using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Plugins.DataAccess;
+using MediatR;
 
 namespace ClearMeasure.Bootcamp.Core.Features.SearchExpenseReports
 {

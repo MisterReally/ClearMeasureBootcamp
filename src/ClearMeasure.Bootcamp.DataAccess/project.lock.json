@@ -22,6 +22,20 @@
           "lib/net40/Iesi.Collections.dll": {}
         }
       },
+      "MediatR/2.0.2": {
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net45/MediatR.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MediatR.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0-beta-23109": {
         "frameworkAssemblies": [
           "Microsoft.CSharp"
@@ -202,6 +216,20 @@
         },
         "runtime": {
           "lib/net40/Iesi.Collections.dll": {}
+        }
+      },
+      "MediatR/2.0.2": {
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net45/MediatR.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MediatR.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.0-beta-23109": {
@@ -387,6 +415,28 @@
         "Iesi.Collections.nuspec",
         "lib/net40/Iesi.Collections.dll",
         "lib/net40/Iesi.Collections.xml"
+      ]
+    },
+    "MediatR/2.0.2": {
+      "sha512": "T9tvqClH65aC+QgEH2hSgKGbJqTWA5ugmVeEOJE1ds2II1kgvSbOeXFDvW9ymCixiuUrCLWRZNT82WcHlMXDfw==",
+      "files": [
+        "lib/dotnet/MediatR.dll",
+        "lib/dotnet/MediatR.xml",
+        "lib/net40/MediatR.dll",
+        "lib/net40/MediatR.xml",
+        "lib/net45/MediatR.dll",
+        "lib/net45/MediatR.xml",
+        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/MediatR.dll",
+        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/MediatR.xml",
+        "lib/win/MediatR.dll",
+        "lib/win/MediatR.xml",
+        "lib/wp80/MediatR.dll",
+        "lib/wp80/MediatR.xml",
+        "lib/wpa81/MediatR.dll",
+        "lib/wpa81/MediatR.xml",
+        "MediatR.2.0.2.nupkg",
+        "MediatR.2.0.2.nupkg.sha512",
+        "MediatR.nuspec"
       ]
     },
     "Microsoft.CSharp/4.0.0-beta-23109": {

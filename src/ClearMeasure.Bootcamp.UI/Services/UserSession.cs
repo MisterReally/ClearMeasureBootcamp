@@ -8,14 +8,15 @@ using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Plugins.DataAccess;
 using ClearMeasure.Bootcamp.Core.Services;
 using System;
+using MediatR;
 
 namespace ClearMeasure.Bootcamp.UI.Services
 {
     public class UserSession : IUserSession
     {
-        private readonly Bus _bus;
+        private readonly IMediator _bus;
 
-        public UserSession(Bus bus)
+        public UserSession(IMediator bus)
         {
             _bus = bus;
         }

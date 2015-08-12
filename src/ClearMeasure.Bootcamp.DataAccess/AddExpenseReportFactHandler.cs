@@ -1,6 +1,7 @@
 ﻿using ClearMeasure.Bootcamp.Core;
 using ClearMeasure.Bootcamp.Core.Model.ExpenseReportAnalytics;
 using ClearMeasure.Bootcamp.DataAccess.Mappings;
+using MediatR;
 using NHibernate;
 
 namespace ClearMeasure.Bootcamp.DataAccess

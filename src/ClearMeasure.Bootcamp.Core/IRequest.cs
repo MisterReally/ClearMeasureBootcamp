@@ -1,7 +1,7 @@
-﻿namespace ClearMeasure.Bootcamp.Core
-{
-    public interface IRequest<out TResponse>
-    {
+﻿//namespace ClearMeasure.Bootcamp.Core
+//{
+//    public interface IRequest<out TResponse>
+//    {
          
-    }
-}
+//    }
+//}

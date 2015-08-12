@@ -3,15 +3,16 @@ using ClearMeasure.Bootcamp.Core.Features.MutlipleExpenses;
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Plugins.DataAccess;
 using ClearMeasure.Bootcamp.DataAccess.Mappings;
+using MediatR;
 using NHibernate;
 
 namespace ClearMeasure.Bootcamp.DataAccess
 {
     public class AddExpenseCommandHandler : IRequestHandler<AddExpenseCommand, AddExpenseResult>
     {
-        private readonly Bus _bus;
+        private readonly IMediator _bus;
 
-        public AddExpenseCommandHandler(Bus bus)
+        public AddExpenseCommandHandler(IMediator bus)
         {
             _bus = bus;
         }

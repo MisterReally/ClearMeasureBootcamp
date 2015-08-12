@@ -5,6 +5,7 @@ using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Plugins.DataAccess;
 using ClearMeasure.Bootcamp.DataAccess.Mappings;
 using NHibernate;
+using MediatR;
 
 namespace ClearMeasure.Bootcamp.DataAccess
 {

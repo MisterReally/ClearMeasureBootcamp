@@ -2,6 +2,7 @@
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Plugins.DataAccess;
 using ClearMeasure.Bootcamp.Core.Services;
+using MediatR;
 using Microsoft.AspNet.Mvc;
 using UI.Models;
 
@@ -9,10 +10,10 @@ namespace ClearMeasure.Bootcamp.UI.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly Bus _bus;
+        private readonly IMediator _bus;
         private readonly IUserSession _session;
 
-        public AccountController(Bus bus, IUserSession session)
+        public AccountController(IMediator bus, IUserSession session)
         {
             _bus = bus;
             _session = session;

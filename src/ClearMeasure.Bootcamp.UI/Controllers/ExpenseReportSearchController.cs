@@ -4,6 +4,7 @@ using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Plugins.DataAccess;
 //using ClearMeasure.Bootcamp.UI.Helpers.ActionFilters;
 using ClearMeasure.Bootcamp.UI.Models;
+using MediatR;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Mvc;
 
@@ -13,9 +14,9 @@ namespace ClearMeasure.Bootcamp.UI.Controllers
     [Authorize]
     public class ExpenseReportSearchController : Controller
     {
-        private readonly Bus _bus;
+        private readonly IMediator _bus;
 
-        public ExpenseReportSearchController(Bus bus)
+        public ExpenseReportSearchController(IMediator bus)
         {
             _bus = bus;
         }

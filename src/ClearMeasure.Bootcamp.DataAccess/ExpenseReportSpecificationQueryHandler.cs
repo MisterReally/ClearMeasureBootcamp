@@ -6,6 +6,7 @@ using ClearMeasure.Bootcamp.Core.Plugins.DataAccess;
 using ClearMeasure.Bootcamp.DataAccess.Mappings;
 using NHibernate;
 using NHibernate.Criterion;
+using MediatR;
 
 namespace ClearMeasure.Bootcamp.DataAccess
 {

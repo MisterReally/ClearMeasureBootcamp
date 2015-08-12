@@ -17,6 +17,7 @@ using Microsoft.Framework.Runtime;
 using ClearMeasure.Bootcamp.UI.Models;
 using ClearMeasure.Bootcamp.UI.Services;
 using ClearMeasure.Bootcamp.Dnx.DependencyInjection;
+using Microsoft.AspNet.Authentication.Cookies;
 
 namespace ClearMeasure.Bootcamp.UI
 {
@@ -80,7 +81,12 @@ namespace ClearMeasure.Bootcamp.UI
 
             // Add cookie-based authentication to the request pipeline.
             // todo: target for MVC6 rework - identity/owin context
-
+            app.UseCookieAuthentication(options =>
+                    {
+                        options.LoginPath = new PathString("/Account/Login");
+                        options.CookieSecure = CookieSecureOption.Never;
+                    }
+                );
 
             // Add MVC to the request pipeline.
             app.UseMvc(routes =>

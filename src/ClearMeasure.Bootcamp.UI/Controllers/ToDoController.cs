@@ -3,6 +3,7 @@ using ClearMeasure.Bootcamp.Core.Features.SearchExpenseReports;
 using ClearMeasure.Bootcamp.Core.Model;
 using ClearMeasure.Bootcamp.Core.Services;
 using ClearMeasure.Bootcamp.UI.Models;
+using MediatR;
 using Microsoft.AspNet.Mvc;
 
 namespace ClearMeasure.Bootcamp.UI.Controllers
@@ -10,9 +11,9 @@ namespace ClearMeasure.Bootcamp.UI.Controllers
     public class ToDoController : Controller
     {
         private readonly IUserSession _session;
-        private readonly Bus _bus;
+        private readonly IMediator _bus;
 
-        public ToDoController(IUserSession session, Bus bus)
+        public ToDoController(IUserSession session, IMediator bus)
         {
             _session = session;
             _bus = bus;

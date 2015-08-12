@@ -1,5 +1,6 @@
 ﻿using System;
 using ClearMeasure.Bootcamp.Core.Model;
+using MediatR;
 
 namespace ClearMeasure.Bootcamp.Core.Features.Workflow
 {

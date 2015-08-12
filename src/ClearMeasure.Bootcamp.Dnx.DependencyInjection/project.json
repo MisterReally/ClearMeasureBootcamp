@@ -15,7 +15,8 @@
     "Autofac": "4.0.0-beta6-*",
     "Autofac.Framework.DependencyInjection": "4.0.0-beta6-*",
     "ClearMeasure.Bootcamp.Core": "1.0.0-*",
-    "ClearMeasure.Bootcamp.DataAccess": "1.0.0-*"
+    "ClearMeasure.Bootcamp.DataAccess": "1.0.0-*",
+    "MediatR": "2.0.2"
   },
 
   "frameworks": {

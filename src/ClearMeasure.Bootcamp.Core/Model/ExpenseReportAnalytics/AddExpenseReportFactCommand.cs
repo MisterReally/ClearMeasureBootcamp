@@ -1,4 +1,6 @@
-﻿namespace ClearMeasure.Bootcamp.Core.Model.ExpenseReportAnalytics
+﻿using MediatR;
+
+namespace ClearMeasure.Bootcamp.Core.Model.ExpenseReportAnalytics
 {
     public class AddExpenseReportFactCommand : IRequest<AddExpenseReportFactResult>
     {
