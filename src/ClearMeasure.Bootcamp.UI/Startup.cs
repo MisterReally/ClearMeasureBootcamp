@@ -16,6 +16,7 @@ using Microsoft.Framework.Logging.Console;
 using Microsoft.Framework.Runtime;
 using ClearMeasure.Bootcamp.UI.Models;
 using ClearMeasure.Bootcamp.UI.Services;
+using ClearMeasure.Bootcamp.Dnx.DependencyInjection;
 
 namespace ClearMeasure.Bootcamp.UI
 {
@@ -42,11 +43,13 @@ namespace ClearMeasure.Bootcamp.UI
         public IConfiguration Configuration { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-
             // Add MVC services to the services container.
             services.AddMvc();
+
+            var builder = new BootcampContainerBuilder(services);
+            return builder.ResolveServiceProvider();
 
         }
 
@@ -78,12 +81,6 @@ namespace ClearMeasure.Bootcamp.UI
             // Add cookie-based authentication to the request pipeline.
             // todo: target for MVC6 rework - identity/owin context
 
-            // Add authentication middleware to the request pipeline. You can configure options such as Id and Secret in the ConfigureServices method.
-            // For more information see http://go.microsoft.com/fwlink/?LinkID=532715
-            // app.UseFacebookAuthentication();
-            // app.UseGoogleAuthentication();
-            // app.UseMicrosoftAccountAuthentication();
-            // app.UseTwitterAuthentication();
 
             // Add MVC to the request pipeline.
             app.UseMvc(routes =>

@@ -19,7 +19,8 @@
     "Microsoft.Framework.Logging": "1.0.0-beta6",
     "Microsoft.Framework.Logging.Console": "1.0.0-beta6",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta6",
-    "ClearMeasure.Bootcamp.Core": "1.0.0-*"
+    "ClearMeasure.Bootcamp.Core": "1.0.0-*",
+    "ClearMeasure.Bootcamp.Dnx.DependencyInjection": "1.0.0-*"
   },
 
   "commands": {

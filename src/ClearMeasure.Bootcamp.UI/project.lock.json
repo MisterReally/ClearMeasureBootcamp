@@ -3,6 +3,40 @@
   "version": 1,
   "targets": {
     "DNX,Version=v4.6": {
+      "Autofac/4.0.0-beta6-110": {
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Autofac.dll": {}
+        }
+      },
+      "Autofac.Framework.DependencyInjection/4.0.0-beta6-110": {
+        "dependencies": {
+          "Autofac": "4.0.0-beta6-110",
+          "Microsoft.Framework.DependencyInjection.Abstractions": "1.0.0-beta6"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Autofac.dll": {},
+          "lib/dnx451/Autofac.Framework.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Autofac.dll": {},
+          "lib/dnx451/Autofac.Framework.DependencyInjection.dll": {}
+        }
+      },
       "EntityFramework.Core/7.0.0-beta6": {
         "dependencies": {
           "Ix-Async": "1.2.4",
@@ -61,6 +95,17 @@
         },
         "runtime": {
           "lib/net45/EntityFramework.Relational.dll": {}
+        }
+      },
+      "FluentNHibernate/2.0.1.0": {
+        "dependencies": {
+          "NHibernate": "4.0"
+        },
+        "compile": {
+          "lib/net40/FluentNHibernate.dll": {}
+        },
+        "runtime": {
+          "lib/net40/FluentNHibernate.dll": {}
         }
       },
       "Iesi.Collections/4.0.1.4000": {
@@ -1499,6 +1544,17 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "NHibernate/4.0.3.4000": {
+        "dependencies": {
+          "Iesi.Collections": "[4.0, 5.0)"
+        },
+        "compile": {
+          "lib/net40/NHibernate.dll": {}
+        },
+        "runtime": {
+          "lib/net40/NHibernate.dll": {}
+        }
+      },
       "Remotion.Linq/2.0.0-alpha-004": {
         "compile": {
           "lib/net45/Remotion.Linq.dll": {}
@@ -1666,10 +1722,50 @@
         "runtime": {
           "lib/net45/_._": {}
         }
+      },
+      "System.Xml.ReaderWriter/4.0.10-beta-23109": {
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/_._": {}
+        }
       }
     }
   },
   "libraries": {
+    "Autofac/4.0.0-beta6-110": {
+      "sha512": "fZ9HKKTFRxKmnRZP0tCLIBB6iPLg7nwdD9NUDGObQ4QJkQ8pz8OrEt10q1WlDAX67H2kbpDF0zVWJ6JjUDh+YQ==",
+      "files": [
+        "Autofac.4.0.0-beta6-110.nupkg",
+        "Autofac.4.0.0-beta6-110.nupkg.sha512",
+        "Autofac.nuspec",
+        "lib/dnx451/Autofac.dll",
+        "lib/dnx451/Autofac.xml",
+        "lib/dnxcore50/Autofac.dll",
+        "lib/dnxcore50/Autofac.xml",
+        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/Autofac.dll",
+        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/Autofac.xml",
+        "repo.json"
+      ]
+    },
+    "Autofac.Framework.DependencyInjection/4.0.0-beta6-110": {
+      "sha512": "CopAkPz5Dh8mXHNLo4a1PeY55IFq5OZn+yS1VYvKRxknYB30g7v8/x/8MBktVVcOxqLIxr8yy1rGDEr1wGDZvA==",
+      "files": [
+        "Autofac.Framework.DependencyInjection.4.0.0-beta6-110.nupkg",
+        "Autofac.Framework.DependencyInjection.4.0.0-beta6-110.nupkg.sha512",
+        "Autofac.Framework.DependencyInjection.nuspec",
+        "lib/dnx451/Autofac.dll",
+        "lib/dnx451/Autofac.Framework.DependencyInjection.dll",
+        "lib/dnx451/Autofac.Framework.DependencyInjection.xml",
+        "lib/dnx451/Autofac.xml",
+        "lib/dnxcore50/Autofac.dll",
+        "lib/dnxcore50/Autofac.Framework.DependencyInjection.dll",
+        "lib/dnxcore50/Autofac.Framework.DependencyInjection.xml",
+        "lib/dnxcore50/Autofac.xml",
+        "repo.json"
+      ]
+    },
     "EntityFramework.Core/7.0.0-beta6": {
       "serviceable": true,
       "sha512": "Jm2bIl5HvtXnbHCIvaYkksw8UQzD8bYovqGH2wMgIztj8cKYQ2I9ziwnWnV3f+/tqcdEHtRl929DJO54zV+3eg==",
@@ -1698,6 +1794,17 @@
         "lib/net45/EntityFramework.Relational.dll",
         "lib/net45/EntityFramework.Relational.xml",
         "repo.json"
+      ]
+    },
+    "FluentNHibernate/2.0.1.0": {
+      "sha512": "zyNzd5AB2OUcMx8lAm0bsFgOTcAMrnoPHRkz22D1+xlgmseaBFR6sJR33WKa1LJmEY2viX+X/pXfRkd9gbEOkA==",
+      "files": [
+        "FluentNHibernate.2.0.1.nupkg",
+        "FluentNHibernate.2.0.1.nupkg.sha512",
+        "FluentNHibernate.nuspec",
+        "lib/net40/FluentNHibernate.dll",
+        "lib/net40/FluentNHibernate.pdb",
+        "lib/net40/FluentNHibernate.XML"
       ]
     },
     "Iesi.Collections/4.0.1.4000": {
@@ -2924,6 +3031,29 @@
         "tools/install.ps1"
       ]
     },
+    "NHibernate/4.0.3.4000": {
+      "sha512": "ukrgwVDaz040ZRzuaKHjAibR0UG0qVRya3eSLAqjMK+SiLdwp+2pHHl7I1KaOV3zsFrlehwOLpZj5nvJs1dbcw==",
+      "files": [
+        "ConfigurationTemplates/FireBird.cfg.xml",
+        "ConfigurationTemplates/MSSQL.cfg.xml",
+        "ConfigurationTemplates/MySql.cfg.xml",
+        "ConfigurationTemplates/Oracle.cfg.xml",
+        "ConfigurationTemplates/PostgreSQL.cfg.xml",
+        "ConfigurationTemplates/SQLite.cfg.xml",
+        "ConfigurationTemplates/SybaseASE.cfg.xml",
+        "ConfigurationTemplates/SybaseSQLAnywhere.cfg.xml",
+        "lib/net40/NHibernate.dll",
+        "lib/net40/NHibernate.xml",
+        "NHibernate.4.0.3.4000.nupkg",
+        "NHibernate.4.0.3.4000.nupkg.sha512",
+        "NHibernate.license.txt",
+        "NHibernate.nuspec",
+        "NHibernate.readme.html",
+        "NHibernate.releasenotes.txt",
+        "nhibernate-configuration.xsd",
+        "nhibernate-mapping.xsd"
+      ]
+    },
     "Remotion.Linq/2.0.0-alpha-004": {
       "sha512": "pwbyws9/UQKYKwsX5qwoqf1BszAhpFaXQJLmmvCitxQjx9cVUrQpRuoz1dd7wnyHzgA0IDkp+tf/FsJXW+x1yQ==",
       "files": [
@@ -3417,6 +3547,29 @@
         "System.Threading.Tasks.4.0.0.nupkg.sha512",
         "System.Threading.Tasks.nuspec"
       ]
+    },
+    "System.Xml.ReaderWriter/4.0.10-beta-23109": {
+      "serviceable": true,
+      "sha512": "H612PfBN+MgpFTLU/Lc7AreFsW821wY4MbcGEA3kHs7YDAXciuQBnjlX/D/xtPOcJde2STIHmj4wpY9FgrkyXQ==",
+      "files": [
+        "lib/dotnet/System.Xml.ReaderWriter.dll",
+        "lib/net46/_._",
+        "ref/dotnet/de/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/es/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/fr/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/it/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ja/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ko/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/ru/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/System.Xml.ReaderWriter.dll",
+        "ref/dotnet/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/zh-hans/System.Xml.ReaderWriter.xml",
+        "ref/dotnet/zh-hant/System.Xml.ReaderWriter.xml",
+        "ref/net46/_._",
+        "System.Xml.ReaderWriter.4.0.10-beta-23109.nupkg",
+        "System.Xml.ReaderWriter.4.0.10-beta-23109.nupkg.sha512",
+        "System.Xml.ReaderWriter.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -3436,7 +3589,8 @@
       "Microsoft.Framework.Logging >= 1.0.0-beta6",
       "Microsoft.Framework.Logging.Console >= 1.0.0-beta6",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-beta6",
-      "ClearMeasure.Bootcamp.Core >= 1.0.0-*"
+      "ClearMeasure.Bootcamp.Core >= 1.0.0-*",
+      "ClearMeasure.Bootcamp.Dnx.DependencyInjection >= 1.0.0-*"
     ],
     "DNX,Version=v4.6": []
   }
