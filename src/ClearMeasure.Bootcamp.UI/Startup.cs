@@ -17,6 +17,7 @@ using Microsoft.Framework.Runtime;
 using ClearMeasure.Bootcamp.UI.Models;
 using ClearMeasure.Bootcamp.UI.Services;
 using ClearMeasure.Bootcamp.Dnx.DependencyInjection;
+using ClearMeasure.Bootcamp.UI.Models.SelectListProviders;
 using Microsoft.AspNet.Authentication.Cookies;
 
 namespace ClearMeasure.Bootcamp.UI
@@ -48,6 +49,7 @@ namespace ClearMeasure.Bootcamp.UI
         {
             // Add MVC services to the services container.
             services.AddMvc();
+            services.AddTransient<UserSelectListProvider>();
 
             var builder = new BootcampContainerBuilder(services);
             return builder.ResolveServiceProvider();
@@ -85,6 +87,7 @@ namespace ClearMeasure.Bootcamp.UI
                     {
                         options.LoginPath = new PathString("/Account/Login");
                         options.CookieSecure = CookieSecureOption.Never;
+                        options.AutomaticAuthentication = true;
                     }
                 );
 

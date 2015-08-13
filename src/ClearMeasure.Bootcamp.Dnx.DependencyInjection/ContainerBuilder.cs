@@ -16,8 +16,9 @@ namespace ClearMeasure.Bootcamp.Dnx.DependencyInjection
     {
         public BootcampContainerBuilder(IServiceCollection services)
         {
+            var foo = Assembly.GetCallingAssembly();
+            this.RegisterAssemblyTypes(foo).AsImplementedInterfaces();
             this.RegisterModule(new CoreModule());
-            this.RegisterAssemblyTypes(Assembly.GetCallingAssembly());
             this.Populate(services);
         }
 
