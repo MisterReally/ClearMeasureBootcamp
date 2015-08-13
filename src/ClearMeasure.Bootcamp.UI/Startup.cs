@@ -88,6 +88,7 @@ namespace ClearMeasure.Bootcamp.UI
                         options.LoginPath = new PathString("/Account/Login");
                         options.CookieSecure = CookieSecureOption.Never;
                         options.AutomaticAuthentication = true;
+                        options.AuthenticationScheme = "Cookies";
                     }
                 );
 

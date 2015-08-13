@@ -2,203 +2,15 @@
   "locked": false,
   "version": 1,
   "targets": {
-    ".NETFramework,Version=v4.6": {
-      "FluentNHibernate/2.0.1.0": {
-        "dependencies": {
-          "NHibernate": "4.0"
-        },
-        "compile": {
-          "lib/net40/FluentNHibernate.dll": {}
-        },
-        "runtime": {
-          "lib/net40/FluentNHibernate.dll": {}
-        }
-      },
-      "Iesi.Collections/4.0.1.4000": {
-        "compile": {
-          "lib/net40/Iesi.Collections.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Iesi.Collections.dll": {}
-        }
-      },
-      "MediatR/2.0.2": {
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/net45/MediatR.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MediatR.dll": {}
-        }
-      },
-      "Microsoft.CSharp/4.0.0-beta-23109": {
-        "frameworkAssemblies": [
-          "Microsoft.CSharp"
-        ],
-        "compile": {
-          "ref/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "NHibernate/4.0.3.4000": {
-        "dependencies": {
-          "Iesi.Collections": "[4.0, 5.0)"
-        },
-        "compile": {
-          "lib/net40/NHibernate.dll": {}
-        },
-        "runtime": {
-          "lib/net40/NHibernate.dll": {}
-        }
-      },
-      "System.Collections/4.0.10": {
-        "compile": {
-          "ref/net46/_._": {}
-        },
-        "runtime": {
-          "lib/net46/_._": {}
-        }
-      },
-      "System.Collections.NonGeneric/4.0.0": {
-        "dependencies": {
-          "System.Diagnostics.Debug": "4.0.10",
-          "System.Globalization": "4.0.10",
-          "System.Resources.ResourceManager": "4.0.0",
-          "System.Runtime": "4.0.20",
-          "System.Runtime.Extensions": "4.0.10",
-          "System.Threading": "4.0.10"
-        },
-        "frameworkAssemblies": [
-          "mscorlib",
-          "System"
-        ],
-        "compile": {
-          "ref/net46/System.Collections.NonGeneric.dll": {}
-        },
-        "runtime": {
-          "lib/net46/System.Collections.NonGeneric.dll": {}
-        }
-      },
-      "System.Data.Common/4.0.0": {
-        "dependencies": {
-          "System.Collections": "4.0.10",
-          "System.Collections.NonGeneric": "4.0.0",
-          "System.Globalization": "4.0.10",
-          "System.IO": "4.0.0",
-          "System.Resources.ResourceManager": "4.0.0",
-          "System.Runtime": "4.0.20",
-          "System.Runtime.Extensions": "4.0.10",
-          "System.Text.RegularExpressions": "4.0.0",
-          "System.Threading.Tasks": "4.0.0"
-        },
-        "frameworkAssemblies": [
-          "mscorlib",
-          "System.Data"
-        ],
-        "compile": {
-          "ref/net46/System.Data.Common.dll": {}
-        },
-        "runtime": {
-          "lib/net46/System.Data.Common.dll": {}
-        }
-      },
-      "System.Diagnostics.Debug/4.0.10": {
-        "compile": {
-          "ref/net46/_._": {}
-        },
-        "runtime": {
-          "lib/net46/_._": {}
-        }
-      },
-      "System.Globalization/4.0.10": {
-        "compile": {
-          "ref/net46/_._": {}
-        },
-        "runtime": {
-          "lib/net46/_._": {}
-        }
-      },
-      "System.IO/4.0.0": {
-        "compile": {
-          "ref/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "System.Linq/4.0.0-beta-23109": {
-        "compile": {
-          "ref/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "System.Resources.ResourceManager/4.0.0": {
-        "compile": {
-          "ref/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "System.Runtime/4.0.10-beta-23109": {
-        "compile": {
-          "ref/net451/_._": {}
-        },
-        "runtime": {
-          "lib/net451/_._": {}
-        }
-      },
-      "System.Runtime.Extensions/4.0.10": {
-        "compile": {
-          "ref/net46/_._": {}
-        },
-        "runtime": {
-          "lib/net46/_._": {}
-        }
-      },
-      "System.Text.RegularExpressions/4.0.0": {
-        "compile": {
-          "ref/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "System.Threading/4.0.10-beta-23109": {
-        "compile": {
-          "ref/net46/_._": {}
-        },
-        "runtime": {
-          "lib/net46/_._": {}
-        }
-      },
-      "System.Threading.Tasks/4.0.0": {
-        "compile": {
-          "ref/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "System.Xml.ReaderWriter/4.0.10-beta-23109": {
-        "compile": {
-          "ref/net46/_._": {}
-        },
-        "runtime": {
-          "lib/net46/_._": {}
-        }
-      }
-    },
     "DNX,Version=v4.6": {
+      "Autofac/3.5.2": {
+        "compile": {
+          "lib/net40/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Autofac.dll": {}
+        }
+      },
       "FluentNHibernate/2.0.1.0": {
         "dependencies": {
           "NHibernate": "4.0"
@@ -241,6 +53,20 @@
         },
         "runtime": {
           "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta6": {
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll": {}
         }
       },
       "NHibernate/4.0.3.4000": {
@@ -396,6 +222,18 @@
     }
   },
   "libraries": {
+    "Autofac/3.5.2": {
+      "sha512": "pGR5LjY8T/16x6SkJNd7u6EjQnE4C7JS0BZJ7Yl7pt313gIUZ/2ZnPSOIM5eaIA7ArxaudlyyLvAT4ayX5UJ/A==",
+      "files": [
+        "Autofac.3.5.2.nupkg",
+        "Autofac.3.5.2.nupkg.sha512",
+        "Autofac.nuspec",
+        "lib/net40/Autofac.dll",
+        "lib/net40/Autofac.xml",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.xml"
+      ]
+    },
     "FluentNHibernate/2.0.1.0": {
       "sha512": "zyNzd5AB2OUcMx8lAm0bsFgOTcAMrnoPHRkz22D1+xlgmseaBFR6sJR33WKa1LJmEY2viX+X/pXfRkd9gbEOkA==",
       "files": [
@@ -469,6 +307,19 @@
         "ref/win8/_._",
         "ref/wp80/_._",
         "ref/wpa81/_._"
+      ]
+    },
+    "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta6": {
+      "serviceable": true,
+      "sha512": "w4Cwg6jgPd3XFGOgBGU3GVGVAwUcMglSDTlI23M8uI7yhDRSDbxZ2HPbjTEBMoj+IYdkfunZWFdA67tdk8L8Tg==",
+      "files": [
+        "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll",
+        "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.xml",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.Abstractions.dll",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.Abstractions.xml",
+        "Microsoft.Framework.Runtime.Abstractions.1.0.0-beta6.nupkg",
+        "Microsoft.Framework.Runtime.Abstractions.1.0.0-beta6.nupkg.sha512",
+        "Microsoft.Framework.Runtime.Abstractions.nuspec"
       ]
     },
     "NHibernate/4.0.3.4000": {
@@ -990,10 +841,9 @@
       "Iesi.Collections >= 4.0.1.4000",
       "NHibernate >= 4.0.3.4000",
       "ClearMeasure.Bootcamp.Core >= 1.0.0-*",
-      "System.Xml.ReaderWriter >= 4.0.10-beta-23109"
-    ],
-    ".NETFramework,Version=v4.6": [
-      "fx/System.Xml >= 4.0.0.0"
+      "System.Xml.ReaderWriter >= 4.0.10-beta-23109",
+      "Autofac >= 3.5.2",
+      "Microsoft.Framework.Runtime.Abstractions >= 1.0.0-beta6"
     ],
     "DNX,Version=v4.6": [
       "fx/System.Xml >= 4.0.0.0"

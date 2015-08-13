@@ -3,6 +3,14 @@
   "version": 1,
   "targets": {
     "DNX,Version=v4.6": {
+      "Autofac/3.5.2": {
+        "compile": {
+          "lib/net40/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Autofac.dll": {}
+        }
+      },
       "FluentNHibernate/1.4.0.0": {
         "dependencies": {
           "NHibernate": "3.3.1.4000"
@@ -632,6 +640,18 @@
     }
   },
   "libraries": {
+    "Autofac/3.5.2": {
+      "sha512": "pGR5LjY8T/16x6SkJNd7u6EjQnE4C7JS0BZJ7Yl7pt313gIUZ/2ZnPSOIM5eaIA7ArxaudlyyLvAT4ayX5UJ/A==",
+      "files": [
+        "Autofac.3.5.2.nupkg",
+        "Autofac.3.5.2.nupkg.sha512",
+        "Autofac.nuspec",
+        "lib/net40/Autofac.dll",
+        "lib/net40/Autofac.xml",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.xml"
+      ]
+    },
     "FluentNHibernate/1.4.0.0": {
       "sha512": "5LKDINUryDogx/GCFtB9avXJu8Dg4A/6k9I2T3Zz6P/C89MDrazhJuCnKcaiXZFqvOWeDpiFYDkZ3w6JYelQ4A==",
       "files": [

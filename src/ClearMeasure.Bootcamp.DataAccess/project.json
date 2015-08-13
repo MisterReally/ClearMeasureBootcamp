@@ -17,16 +17,14 @@
     "Iesi.Collections": "4.0.1.4000",
     "NHibernate": "4.0.3.4000",
     "ClearMeasure.Bootcamp.Core": "1.0.0-*",
-    "System.Xml.ReaderWriter": "4.0.10-beta-23109"
+    "System.Xml.ReaderWriter": "4.0.10-beta-23109",
+    "Autofac": "3.5.2",
+    "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta6"
 
   },
 
   "frameworks": {
-    "net46": {
-      "frameworkAssemblies": {
-        "System.Xml": "4.0.0.0"
-      }
-    },
+
     "dnx46": {
       "System.Collections": "4.0.10-beta-23109",
       "frameworkAssemblies": {
