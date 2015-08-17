@@ -11,6 +11,7 @@ namespace ClearMeasure.Bootcamp.DataAccess
     {
         public SingleResult<ExpenseReport> Handle(ExpenseReportSaveCommand request)
         {
+            //todo: refactor transacted session
             using (ISession session = DataContext.GetTransactedSession())
             {
                 ITransaction transaction = session.BeginTransaction();

@@ -10,6 +10,7 @@ namespace ClearMeasure.Bootcamp.DataAccess
     {
         public AddExpenseReportFactResult Handle(AddExpenseReportFactCommand command)
         {
+            //todo: refactor transacted session
             using (ISession session = DataContext.GetTransactedSession())
             {
                 session.Save(command.ExpenseReportFact);

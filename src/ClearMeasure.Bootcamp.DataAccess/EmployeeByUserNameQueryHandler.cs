@@ -11,6 +11,7 @@ namespace ClearMeasure.Bootcamp.DataAccess
     {
         public SingleResult<Employee> Handle(EmployeeByUserNameQuery specification)
         {
+            //todo: refactor transacted session
             using (ISession session = DataContext.GetTransactedSession())
             {
                 IQuery query = session.CreateQuery("from Employee emp where emp.UserName = :username");

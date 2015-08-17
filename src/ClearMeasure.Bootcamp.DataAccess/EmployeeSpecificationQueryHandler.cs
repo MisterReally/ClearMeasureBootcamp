@@ -21,7 +21,10 @@ namespace ClearMeasure.Bootcamp.DataAccess
 
         public MultipleResult<Employee> Handle(EmployeeSpecificationQuery request)
         {
+            //todo: update with interface to access program settings
             var configPath = $"{_appEnv.ApplicationBasePath}\\hibernate.cfg.xml";
+
+            //todo: refactor transacted session
             using (var session = DataContext.GetTransactedSession(configPath))
             {
                 var criteria = session.CreateCriteria(typeof(Employee));

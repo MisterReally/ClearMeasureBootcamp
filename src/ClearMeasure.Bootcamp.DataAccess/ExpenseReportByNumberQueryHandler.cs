@@ -12,6 +12,7 @@ namespace ClearMeasure.Bootcamp.DataAccess
     {
         public SingleResult<ExpenseReport> Handle(ExpenseReportByNumberQuery request)
         {
+            //todo: refactor transacted session
             using (ISession session = DataContext.GetTransactedSession())
             {
                 ICriteria criteria = session.CreateCriteria(typeof (ExpenseReport));

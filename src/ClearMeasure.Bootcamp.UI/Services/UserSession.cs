@@ -31,7 +31,6 @@ namespace ClearMeasure.Bootcamp.UI.Services
 
         public Employee GetCurrentUser()
         {
-            //IOwinContext context = HttpContext.Current.GetOwinContext();
             var user = _contextAccessor.HttpContext.User;
             if (_contextAccessor.HttpContext.User.Identity.IsAuthenticated)
             {
