@@ -40,7 +40,7 @@ namespace ClearMeasure.Bootcamp.Dnx.DependencyInjection.Modules
                 var c = ctx.Resolve<IComponentContext>();
                 return t => (IEnumerable<object>)c.Resolve(typeof(IEnumerable<>).MakeGenericType(t));
             });
-            builder.
+            
         }
 
 
