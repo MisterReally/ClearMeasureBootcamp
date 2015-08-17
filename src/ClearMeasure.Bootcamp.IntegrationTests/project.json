@@ -27,7 +27,9 @@
     "structuremap": "3.0.5.130",
 
     "ClearMeasure.Bootcamp.Core": "1.0.0-*",
-    "ClearMeasure.Bootcamp.DataAccess": "1.0.0-*"
+    "ClearMeasure.Bootcamp.DataAccess": "1.0.0-*",
+    "ClearMeasure.Bootcamp.UI": "1.0.0-*",
+    "ClearMeasure.Bootcamp.Dnx.DependencyInjection": "1.0.0-*"
   },
   "commands": {
     "test": "xunit.runner.dnx",

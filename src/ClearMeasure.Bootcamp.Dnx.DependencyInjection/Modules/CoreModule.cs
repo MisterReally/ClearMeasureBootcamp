@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
+using ClearMeasure.Bootcamp.Core.Features.MutlipleExpenses;
+using ClearMeasure.Bootcamp.DataAccess;
 
 namespace ClearMeasure.Bootcamp.Dnx.DependencyInjection.Modules
 {
@@ -38,7 +40,7 @@ namespace ClearMeasure.Bootcamp.Dnx.DependencyInjection.Modules
                 var c = ctx.Resolve<IComponentContext>();
                 return t => (IEnumerable<object>)c.Resolve(typeof(IEnumerable<>).MakeGenericType(t));
             });
-
+            builder.
         }
 
 

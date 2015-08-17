@@ -18,8 +18,10 @@ namespace ClearMeasure.Bootcamp.Dnx.DependencyInjection
         {
             var foo = Assembly.GetCallingAssembly();
             this.RegisterAssemblyTypes(foo).AsImplementedInterfaces();
+
             this.RegisterModule(new CoreModule());
-            this.Populate(services);
+            if(services != null)
+                this.Populate(services);
         }
 
         public IServiceProvider ResolveServiceProvider()
