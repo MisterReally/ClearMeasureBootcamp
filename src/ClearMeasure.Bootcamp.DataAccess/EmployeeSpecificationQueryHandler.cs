@@ -24,7 +24,6 @@ namespace ClearMeasure.Bootcamp.DataAccess
             //todo: update with interface to access program settings
             var configPath = $"{_appEnv.ApplicationBasePath}\\hibernate.cfg.xml";
 
-            //todo: refactor transacted session
             using (var session = DataContext.GetTransactedSession(configPath))
             {
                 var criteria = session.CreateCriteria(typeof(Employee));

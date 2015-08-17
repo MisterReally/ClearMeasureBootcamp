@@ -7,15 +7,25 @@ using ClearMeasure.Bootcamp.DataAccess.Mappings;
 using NHibernate;
 using NHibernate.Criterion;
 using MediatR;
+using Microsoft.Framework.Runtime;
 
 namespace ClearMeasure.Bootcamp.DataAccess
 {
     public class ExpenseReportSpecificationQueryHandler : IRequestHandler<ExpenseReportSpecificationQuery, MultipleResult<ExpenseReport>>
     {
+        private readonly IApplicationEnvironment _appEnv;
+
+        public ExpenseReportSpecificationQueryHandler(IApplicationEnvironment appEnv)
+        {
+            _appEnv = appEnv;
+        }
+
         public MultipleResult<ExpenseReport> Handle(ExpenseReportSpecificationQuery command)
         {
-            //todo: refactor transacted session
-            using (ISession session = DataContext.GetTransactedSession())
+            //todo: update with interface to access program settings
+            var configPath = $"{_appEnv.ApplicationBasePath}\\hibernate.cfg.xml";
+
+            using (ISession session = DataContext.GetTransactedSession(configPath))
             {
                 ICriteria criteria = session.CreateCriteria(typeof(ExpenseReport));
 
